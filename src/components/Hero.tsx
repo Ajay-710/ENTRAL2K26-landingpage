@@ -1,15 +1,21 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap } from 'lucide-react';
-import { SpiralAnimation } from './ui/spiral-animation';
+import { Vortex } from './ui/vortex';
 import { ParticleTextEffect } from './ui/particle-text-effect';
 
 const Hero = () => {
     return (
         <section id="home" className="relative h-screen w-full bg-black overflow-hidden flex items-center justify-center">
-            {/* Spiral Animation Background */}
+            {/* Vortex Animation Background */}
             <div className="absolute inset-0 z-0">
-                <SpiralAnimation />
+                <Vortex
+                    backgroundColor="black"
+                    rangeY={800}
+                    particleCount={500}
+                    baseHue={160} // Cyan/Greenish hue
+                    className="w-full h-full"
+                />
             </div>
 
             {/* Content Layer */}

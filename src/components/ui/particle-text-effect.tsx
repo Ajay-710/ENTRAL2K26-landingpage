@@ -262,16 +262,22 @@ export function ParticleTextEffect({ words = DEFAULT_WORDS, className }: Particl
         }
     }
 
+    const inViewRef = useRef(false);
+
     const animate = () => {
+        if (!inViewRef.current) {
+            animationRef.current = requestAnimationFrame(animate)
+            return
+        }
+
         const canvas = canvasRef.current
         if (!canvas) return
 
         const ctx = canvas.getContext("2d")!
         const particles = particlesRef.current
 
-        // Background with motion blur
-        ctx.fillStyle = "rgba(0, 0, 0, 0.1)"
-        ctx.fillRect(0, 0, canvas.width, canvas.height)
+        // Clear background for transparency
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
 
         // Update and draw particles
         for (let i = particles.length - 1; i >= 0; i--) {
@@ -317,6 +323,14 @@ export function ParticleTextEffect({ words = DEFAULT_WORDS, className }: Particl
     useEffect(() => {
         const canvas = canvasRef.current
         if (!canvas) return
+
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                inViewRef.current = entry.isIntersecting
+            });
+        });
+
+        obs.observe(canvas);
 
         canvas.width = 1000
         canvas.height = 300 // Reduced height to fit better
@@ -364,6 +378,7 @@ export function ParticleTextEffect({ words = DEFAULT_WORDS, className }: Particl
             canvas.removeEventListener("mouseup", handleMouseUp)
             canvas.removeEventListener("mousemove", handleMouseMove)
             canvas.removeEventListener("contextmenu", handleContextMenu)
+            obs.disconnect()
         }
     }, [words])
 

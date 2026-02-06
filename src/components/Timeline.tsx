@@ -3,9 +3,21 @@ import { motion } from 'framer-motion';
 
 const Timeline = () => {
     const schedule = [
-        { day: "Day 1", date: "March 12", events: "Inauguration, Hackathon Begins, Workshop Series A" },
-        { day: "Day 2", date: "March 13", events: "Robo Wars, Treasure Hunt, Gaming Finals" },
-        { day: "Day 3", date: "March 14", events: "Cultural Finals, Prize Distribution, DJ Night" }
+        {
+            day: "Grand Launch",
+            date: "February 06, 2026 (3:00 PM)",
+            events: "Organised by Yuva Club & Student Forum. Features Chenda Melam, Silambam, and Flash Mob performances at College Ground."
+        },
+        {
+            day: "Day 1 - Main Fest",
+            date: "March 12, 2026",
+            events: "Inauguration, National-level Hackathon, Technical Workshops, and Cultural Prelims."
+        },
+        {
+            day: "Day 2 - Main Fest",
+            date: "March 13, 2026",
+            events: "Robo Wars, Grand Finale Culturals, Celebrity Guest Performance, and Prize Distribution."
+        }
     ];
 
     return (

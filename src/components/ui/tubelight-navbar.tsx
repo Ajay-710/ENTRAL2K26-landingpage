@@ -46,7 +46,14 @@ export function NavBar({ items, className }: NavBarProps) {
                         <a
                             key={item.name}
                             href={item.url}
-                            onClick={() => setActiveTab(item.name)}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                setActiveTab(item.name);
+                                const element = document.querySelector(item.url);
+                                if (element) {
+                                    element.scrollIntoView({ behavior: 'smooth' });
+                                }
+                            }}
                             className={cn(
                                 "relative cursor-pointer text-sm font-semibold px-6 py-2 rounded-full transition-colors",
                                 "text-white/80 hover:text-primary",

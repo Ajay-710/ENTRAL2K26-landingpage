@@ -42,7 +42,7 @@ const About = () => {
                             THE SPIRIT <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">OF ALPHA TECH</span>
                         </h2>
                         <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-2xl uppercase tracking-wider">
-                            ENTRAL 2K26 is the premier technical and cultural showcase of Alpha College of Engineering, collaboratively launched by the Yuva Club and Student Forum to celebrate unity, innovation, and tradition.
+                            ENTHRAL 2K26 is the premier technical and cultural showcase of Alpha College of Engineering, collaboratively launched by the Yuva Club and Student Forum to celebrate unity, innovation, and tradition.
                         </p>
                     </motion.div>
 

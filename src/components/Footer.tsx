@@ -1,5 +1,5 @@
 import React from 'react';
-import { Instagram, Facebook, Twitter, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Instagram, Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
     return (
@@ -13,21 +13,16 @@ const Footer = () => {
                     {/* Brand */}
                     <div>
                         <h2 className="text-3xl font-orbitron font-bold text-white mb-4">
-                            ENTRAL<span className="text-cyan-400">2K26</span>
+                            ENTHRAL<span className="text-cyan-400">2K26</span>
                         </h2>
                         <p className="text-gray-400 mb-6 uppercase text-sm tracking-wider font-bold">
                             "The Greatest of <span className="text-cyan-400">Alpha</span> Time"
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cyan-600 transition-all">
+                            <a href="https://www.instagram.com/enthral2k26/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cyan-600 transition-all">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-blue-600 transition-all">
-                                <Facebook size={20} />
-                            </a>
-                            <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-sky-500 transition-all">
-                                <Twitter size={20} />
-                            </a>
+
                         </div>
                     </div>
 
@@ -58,7 +53,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Mail className="w-5 h-5 text-cyan-500 shrink-0" />
-                                <span>contact@entral2k26.com</span>
+                                <span>enthral.info@gmail.com</span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-cyan-500 shrink-0" />
@@ -89,7 +84,7 @@ const Footer = () => {
 
                 <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-gray-500 text-xs tracking-tighter uppercase font-bold">
-                        © 2026 ENTRAL FEST. Built with passion for technology.
+                        © 2026 Alpha College of Engineering. Built with passion for technology.
                     </p>
                     <div className="flex space-x-6 text-xs text-gray-500 uppercase font-bold">
                         <a href="#" className="hover:text-cyan-400 transition-colors">Privacy</a>

@@ -139,7 +139,7 @@ interface ParticleTextEffectProps {
     className?: string
 }
 
-const DEFAULT_WORDS = ["ENTRAL", "2K26"]
+const DEFAULT_WORDS = ["ENTHRAL", "2K26"]
 
 export function ParticleTextEffect({ words = DEFAULT_WORDS, className }: ParticleTextEffectProps) {
     const canvasRef = useRef<HTMLCanvasElement>(null)

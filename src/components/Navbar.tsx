@@ -32,7 +32,7 @@ const Navbar = () => {
                 <div className="flex items-center justify-between h-20">
                     <div className="flex-shrink-0 cursor-pointer">
                         <h1 className="text-2xl font-orbitron font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-600">
-                            ENTRAL<span className="text-white">2K26</span>
+                            ENTHRAL<span className="text-white">2K26</span>
                         </h1>
                     </div>
 

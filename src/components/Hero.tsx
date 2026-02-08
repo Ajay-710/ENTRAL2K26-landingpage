@@ -47,7 +47,7 @@ const Hero = () => {
 
                 {/* Main Heading - The Focal Point */}
                 <div className="relative mb-6 w-full flex justify-center">
-                    <ParticleTextEffect words={["ENTRAL", "2K26"]} />
+                    <ParticleTextEffect words={["ENTHRAL", "2K26"]} />
                 </div>
 
                 {/* Subtitle/Tagline */}

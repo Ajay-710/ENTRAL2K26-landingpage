@@ -61,8 +61,8 @@ const Events = () => {
             image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070'
         },
         {
-            id: 'd1-8', title: 'Tech Debate', category: 'Technical', day: 'Day 1',
-            description: ['Battle Yarn', 'Open to all domains', 'Topics on spot'],
+            id: 'd1-8', title: 'Battle Yarn', category: 'Technical', day: 'Day 1',
+            description: ['(Tech Debate)', 'Open to all domains', 'Topics on spot'],
             details: 'Venue: Seminar Hall',
             icon: <MessageSquare size={24} />, color: 'from-orange-500 to-amber-500',
             image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070'
@@ -75,15 +75,15 @@ const Events = () => {
             image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070'
         },
         {
-            id: 'd1-10', title: 'Project Expo', category: 'Technical', day: 'Day 1',
-            description: ['ProtoFest', 'Working Models/Demos', 'Open to all'],
+            id: 'd1-10', title: 'Protofest', category: 'Technical', day: 'Day 1',
+            description: ['(Project Expo)', 'Working Models/Demos', 'Open to all'],
             details: 'Venue: SLC',
             icon: <Cpu size={24} />, color: 'from-blue-400 to-teal-400',
             image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070'
         },
         {
-            id: 'd1-11', title: 'Paper Presentation', category: 'Technical', day: 'Day 1',
-            description: ['Pitch Ur Paper', 'Team: Max 4', 'PPT Mandatory'],
+            id: 'd1-11', title: 'Pitch Your Paper', category: 'Technical', day: 'Day 1',
+            description: ['(Paper Presentation)', 'Team: Max 4', 'PPT Mandatory'],
             details: 'Venue: CSE Lab',
             icon: <FileText size={24} />, color: 'from-indigo-400 to-cyan-400',
             image: 'https://images.unsplash.com/photo-1544531835-3a99008aaaae?q=80&w=2070'
@@ -118,7 +118,7 @@ const Events = () => {
         },
         {
             id: 'd1-16', title: 'Brain Hack', category: 'Technical', day: 'Day 1',
-            description: ['Individual', 'No Gadgets', 'On-spot Pitching'],
+            description: ['(Problem Pitching)', 'Individual', 'No Gadgets'],
             details: 'Venue: Classrooms',
             icon: <BrainCircuit size={24} />, color: 'from-fuchsia-500 to-purple-600',
             image: 'https://images.unsplash.com/photo-1559757175-5b87cc45f633?q=80&w=2070'
@@ -126,8 +126,8 @@ const Events = () => {
 
         // DAY 1 - CREATIVE / CULTURAL / BUSINESS / GAMING
         {
-            id: 'd1-5', title: 'Poster Design', category: 'Creative', day: 'Day 1',
-            description: ['Pixel Craft', 'Platform: Canva', 'Mobile Allowed'],
+            id: 'd1-5', title: 'Pixel Craft', category: 'Creative', day: 'Day 1',
+            description: ['(Poster Design)', 'Platform: Canva', 'Mobile Allowed'],
             details: 'Venue: Design Lab',
             icon: <Image size={24} />, color: 'from-pink-400 to-purple-400',
             image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2070'

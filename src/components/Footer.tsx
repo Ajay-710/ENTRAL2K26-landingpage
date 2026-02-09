@@ -32,7 +32,16 @@ const Footer = () => {
                         <ul className="space-y-3">
                             {['Home', 'About', 'Events', 'Timeline', 'Register'].map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item.toLowerCase()}`} className="text-gray-400 hover:text-cyan-400 transition-colors uppercase text-sm tracking-widest font-bold">
+                                    <a
+                                        href={`#${item.toLowerCase()}`}
+                                        onClick={(e) => {
+                                            if (item === 'Register') {
+                                                e.preventDefault();
+                                                alert("Registration link opens soon!");
+                                            }
+                                        }}
+                                        className="text-gray-400 hover:text-cyan-400 transition-colors uppercase text-sm tracking-widest font-bold"
+                                    >
                                         {item}
                                     </a>
                                 </li>

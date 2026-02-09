@@ -61,7 +61,7 @@ const Registration = () => {
                             ))}
                         </div>
 
-                        <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transform hover:scale-105 transition-all duration-300">
+                        <button onClick={() => alert("Registration link opens soon!")} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] transform hover:scale-105 transition-all duration-300">
                             Register For ENTHRAL 2K26
                         </button>
                     </div>

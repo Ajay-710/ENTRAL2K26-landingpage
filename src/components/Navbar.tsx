@@ -47,7 +47,7 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all duration-300 transform hover:scale-105">
+                            <button onClick={() => alert("Registration link opens soon!")} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all duration-300 transform hover:scale-105">
                                 Register Now
                             </button>
                         </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                            <button onClick={() => alert("Registration link opens soon!")} className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)]">
                                 Register Now
                             </button>
                         </div>

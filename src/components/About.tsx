@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Music, Rocket } from 'lucide-react';
+import { Meteors } from './ui/meteors';
 
 const About = () => {
     const cards = [
@@ -70,6 +71,8 @@ const About = () => {
                         >
                             {/* Decorative Corner */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white/5 to-transparent rounded-bl-3xl"></div>
+
+                            <Meteors number={20} />
 
                             <div className="relative z-10">
                                 <div className="mb-8 p-4 rounded-2xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-500">

@@ -26,12 +26,21 @@ export default {
             animation: {
                 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                 'float': 'float 6s ease-in-out infinite',
+                "meteor-effect": "meteor 5s linear infinite",
             },
             keyframes: {
                 float: {
                     '0%, 100%': { transform: 'translateY(0)' },
                     '50%': { transform: 'translateY(-20px)' },
-                }
+                },
+                meteor: {
+                    "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+                    "70%": { opacity: "1" },
+                    "100%": {
+                        transform: "rotate(215deg) translateX(-500px)",
+                        opacity: "0",
+                    },
+                },
             }
         },
     },

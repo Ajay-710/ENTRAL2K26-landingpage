@@ -16,7 +16,7 @@ const Timeline = () => {
         {
             day: "Day 2 - Main Fest",
             date: "March 13, 2026",
-            events: "Robo Wars, Grand Finale Culturals, Celebrity Guest Performance, and Prize Distribution."
+            events: "Robo Race, Grand Finale Culturals, Celebrity Guest Performance, and Prize Distribution."
         }
     ];
 

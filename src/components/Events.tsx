@@ -24,209 +24,288 @@ const Events = () => {
     const [activeCategory, setActiveCategory] = useState('All');
 
     const events: Event[] = [
-        // DAY 1 - TECHNICAL
+        // DAY 1
         {
-            id: 'd1-1', title: 'Hackathon', category: 'Technical', day: 'Day 1',
-            description: ['AIML / IoT / Healthcare', 'Team: 2-4 members', 'Venue: IT Lab', 'Internet Allowed'],
-            details: 'Problem statements announced on spot.',
-            icon: <Terminal size={24} />, color: 'from-cyan-500 to-blue-500',
-            image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070'
+            id: 'd1-1', title: 'Adaptune', category: 'Cultural', day: 'Day 1',
+            description: ['Individual/Team', 'Music & Dance', 'On Spot'],
+            details: 'Venue: Auditorium',
+            icon: <Music size={24} />, color: 'from-pink-500 to-rose-500',
+            image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070'
         },
         {
-            id: 'd1-2', title: 'Coding Contest', category: 'Technical', day: 'Day 1',
-            description: ['Individual Participation', 'Q&A Based', 'No Internet'],
-            details: 'Venue: Assigned Room',
-            icon: <Code2 size={24} />, color: 'from-blue-500 to-indigo-500',
-            image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070'
-        },
-        {
-            id: 'd1-3', title: 'Debugging Contest', category: 'Technical', day: 'Day 1',
-            description: ['Individual Participation', 'Find & Fix Errors', 'Time-bound'],
-            details: 'Venue: Room 1',
-            icon: <Bug size={24} />, color: 'from-red-500 to-pink-600',
-            image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070'
-        },
-        {
-            id: 'd1-4', title: 'Code Relay', category: 'Technical', day: 'Day 1',
-            description: ['Team: 3-4 members', 'Relay Coding', 'Laptop Mandatory'],
-            details: 'Venue: CISCO Lab',
-            icon: <Layers size={24} />, color: 'from-violet-500 to-purple-500',
-            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070'
-        },
-        {
-            id: 'd1-6', title: 'Prompting War', category: 'Technical', day: 'Day 1',
-            description: ['Web Design via AI', 'Individual/Team', 'No Plagiarism'],
-            details: 'Venue: TBD',
-            icon: <Bot size={24} />, color: 'from-emerald-400 to-cyan-500',
-            image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070'
-        },
-        {
-            id: 'd1-8', title: 'Battle Yarn', category: 'Technical', day: 'Day 1',
-            description: ['(Tech Debate)', 'Open to all domains', 'Topics on spot'],
+            id: 'd1-2', title: 'Battle Yarn', category: 'Technical', day: 'Day 1',
+            description: ['(Tech Debate)', 'Open to all', 'Topics on Spot'],
             details: 'Venue: Seminar Hall',
             icon: <MessageSquare size={24} />, color: 'from-orange-500 to-amber-500',
             image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070'
         },
         {
-            id: 'd1-9', title: 'Instolutions', category: 'Technical', day: 'Day 1',
-            description: ['Team: 2 members', 'Problem Solving', 'Practical Solutions'],
-            details: 'Venue: Lab 2',
-            icon: <Lightbulb size={24} />, color: 'from-yellow-400 to-orange-500',
-            image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070'
+            id: 'd1-3', title: 'Bio-Connect', category: 'Technical', day: 'Day 1',
+            description: ['Team: 2-3 members', 'Presentation Based', 'Bio-Tech'],
+            details: 'Venue: Bio Lab',
+            icon: <Activity size={24} />, color: 'from-green-500 to-emerald-600',
+            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2070'
         },
         {
-            id: 'd1-10', title: 'Protofest', category: 'Technical', day: 'Day 1',
-            description: ['(Project Expo)', 'Working Models/Demos', 'Open to all'],
-            details: 'Venue: SLC',
-            icon: <Cpu size={24} />, color: 'from-blue-400 to-teal-400',
-            image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070'
+            id: 'd1-4', title: 'Brain Hack', category: 'Technical', day: 'Day 1',
+            description: ['(Problem Pitching)', 'Individual', 'No Gadgets'],
+            details: 'Venue: Classrooms',
+            icon: <BrainCircuit size={24} />, color: 'from-fuchsia-500 to-purple-600',
+            image: 'https://images.unsplash.com/photo-1559757175-5b87cc45f633?q=80&w=2070'
         },
         {
-            id: 'd1-11', title: 'Pitch Your Paper', category: 'Technical', day: 'Day 1',
-            description: ['(Paper Presentation)', 'Team: Max 4', 'PPT Mandatory'],
-            details: 'Venue: CSE Lab',
-            icon: <FileText size={24} />, color: 'from-indigo-400 to-cyan-400',
-            image: 'https://images.unsplash.com/photo-1544531835-3a99008aaaae?q=80&w=2070'
+            id: 'd1-5', title: 'Coding Contest', category: 'Technical', day: 'Day 1',
+            description: ['Individual Participation', 'Competitive Coding', 'No Internet'],
+            details: 'Venue: IT Lab',
+            icon: <Code2 size={24} />, color: 'from-blue-500 to-indigo-500',
+            image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070'
         },
         {
-            id: 'd1-12', title: 'Electro Hunt', category: 'Technical', day: 'Day 1',
-            description: ['Team: 2-4 members', 'Clue-based Hunt', 'Technical'],
+            id: 'd1-6', title: 'Corporate Walk', category: 'Fashion', day: 'Day 1',
+            description: ['Professional Attire', 'Ramp Walk', 'Individual'],
+            details: 'Venue: Main Stage',
+            icon: <Users size={24} />, color: 'from-purple-500 to-indigo-600',
+            image: 'https://images.unsplash.com/photo-1509631179647-b84917154012?q=80&w=2070'
+        },
+        {
+            id: 'd1-7', title: 'Cosplay', category: 'Cultural', day: 'Day 1',
+            description: ['Costume Play', 'Creative', '3 Mins Performance'],
+            details: 'Venue: Seminar Hall',
+            icon: <Skull size={24} />, color: 'from-red-600 to-orange-600',
+            image: 'https://images.unsplash.com/photo-1612686635542-b27d7920ab0d?q=80&w=2070'
+        },
+        {
+            id: 'd1-8', title: 'Debugging Contest', category: 'Technical', day: 'Day 1',
+            description: ['Find & Fix Errors', 'Individual', 'Time-bound'],
+            details: 'Venue: Room 1',
+            icon: <Bug size={24} />, color: 'from-red-500 to-pink-600',
+            image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070'
+        },
+        {
+            id: 'd1-9', title: 'Drawing', category: 'Arts', day: 'Day 1',
+            description: ['Pencil / Color', 'Theme Based', 'Individual'],
+            details: 'Venue: Art Block',
+            icon: <PenTool size={24} />, color: 'from-yellow-500 to-orange-500',
+            image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070'
+        },
+        {
+            id: 'd1-10', title: 'Electro Hunt', category: 'Technical', day: 'Day 1',
+            description: ['Circuit Debugging', 'Treasure Hunt', 'Team: 2-4'],
             details: 'Venue: Campus',
-            icon: <Zap size={24} />, color: 'from-yellow-500 to-red-500',
+            icon: <Zap size={24} />, color: 'from-yellow-400 to-red-400',
             image: 'https://images.unsplash.com/photo-1555664424-778a69032334?q=80&w=2070'
         },
         {
+            id: 'd1-11', title: 'Face Painting', category: 'Arts', day: 'Day 1',
+            description: ['Creative', 'Pair Event', 'Bring Materials'],
+            details: 'Venue: Art Block',
+            icon: <Palette size={24} />, color: 'from-pink-400 to-purple-400',
+            image: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?q=80&w=2070'
+        },
+        {
+            id: 'd1-12', title: 'Hackathon', category: 'Technical', day: 'Day 1',
+            description: ['AIML / IoT / Healthcare', 'Team: 2-4', 'Innovation'],
+            details: 'Venue: IT Lab',
+            icon: <Terminal size={24} />, color: 'from-cyan-500 to-blue-500',
+            image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070'
+        },
+        {
             id: 'd1-13', title: 'Ideathon (EC)', category: 'Technical', day: 'Day 1',
-            description: ['Team: 2-4 members', 'Innovative Ideas', 'Projector Used'],
+            description: ['Innovative Ideas', 'Team: 2-4', 'Electronics'],
             details: 'Venue: Seminar Hall',
             icon: <Lightbulb size={24} />, color: 'from-pink-500 to-rose-500',
             image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070'
         },
         {
-            id: 'd1-14', title: 'Robo Race', category: 'Technical', day: 'Day 1',
+            id: 'd1-14', title: 'Instolutions', category: 'Technical', day: 'Day 1',
+            description: ['Instant Solutions', 'Problem Solving', 'Team: 2'],
+            details: 'Venue: Lab 2',
+            icon: <Lightbulb size={24} />, color: 'from-yellow-400 to-orange-500',
+            image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2070'
+        },
+        {
+            id: 'd1-15', title: 'Nail Art', category: 'Arts', day: 'Day 1',
+            description: ['Creative Design', 'Individual', 'Time Bound'],
+            details: 'Venue: Art Block',
+            icon: <Palette size={24} />, color: 'from-red-400 to-pink-500',
+            image: 'https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=2070'
+        },
+        {
+            id: 'd1-16', title: 'Pixel Craft', category: 'Creative', day: 'Day 1',
+            description: ['(Poster Design)', 'Platform: Canva', 'Mobile Allowed'],
+            details: 'Venue: Design Lab',
+            icon: <Image size={24} />, color: 'from-purple-500 to-cyan-500',
+            image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2070'
+        },
+        {
+            id: 'd1-17', title: 'ProtoFest', category: 'Technical', day: 'Day 1',
+            description: ['(Project Expo)', 'Working Models', 'All Domains'],
+            details: 'Venue: SLC',
+            icon: <Cpu size={24} />, color: 'from-blue-400 to-teal-400',
+            image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070'
+        },
+        {
+            id: 'd1-18', title: 'Prompting War', category: 'Technical', day: 'Day 1',
+            description: ['(Web Design)', 'AI Prompting', 'No Plagiarism'],
+            details: 'Venue: TBD',
+            icon: <Bot size={24} />, color: 'from-emerald-400 to-cyan-500',
+            image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070'
+        },
+        {
+            id: 'd1-19', title: 'Rangoli', category: 'Arts', day: 'Day 1',
+            description: ['Traditional Art', 'Team/Individual', 'Bring Colors'],
+            details: 'Venue: Corridor',
+            icon: <Palette size={24} />, color: 'from-orange-500 to-red-500',
+            image: 'https://images.unsplash.com/photo-1601306385499-a8647c20c9db?q=80&w=2070'
+        },
+        {
+            id: 'd1-20', title: 'Singing', category: 'Cultural', day: 'Day 1',
+            description: ['Solo/Group', 'Time Limit', 'Melody'],
+            details: 'Venue: Auditorium',
+            icon: <Mic2 size={24} />, color: 'from-blue-400 to-purple-500',
+            image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070'
+        },
+        {
+            id: 'd1-21', title: 'StandUp Comedy', category: 'Fun', day: 'Day 1',
+            description: ['Humor', 'Individual', 'Open Mic'],
+            details: 'Venue: Seminar Hall',
+            icon: <Smile size={24} />, color: 'from-yellow-400 to-orange-400',
+            image: 'https://images.unsplash.com/photo-1525926477800-7a3be582c8fe?q=80&w=2070'
+        },
+        {
+            id: 'd1-22', title: 'Web Relay', category: 'Technical', day: 'Day 1',
+            description: ['Team Coding', 'Relay Format', 'Web Dev'],
+            details: 'Venue: CISCO Lab',
+            icon: <Layers size={24} />, color: 'from-violet-500 to-purple-500',
+            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070'
+        },
+
+        // DAY 2
+        {
+            id: 'd2-1', title: 'APL Auction', category: 'Fun', day: 'Day 2',
+            description: ['Cricket Auction', 'Team Strategy', 'Bidding'],
+            details: 'Venue: Seminar Hall',
+            icon: <Gavel size={24} />, color: 'from-yellow-500 to-amber-600',
+            image: 'https://images.unsplash.com/photo-1577416412292-807187673842?q=80&w=2070'
+        },
+        {
+            id: 'd2-2', title: 'Anime Quiz', category: 'Quiz', day: 'Day 2',
+            description: ['Anime Trivia', 'Team/Solo', 'Buzzer Round'],
+            details: 'Venue: Room 2',
+            icon: <HelpCircle size={24} />, color: 'from-pink-500 to-rose-500',
+            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2070'
+        },
+        {
+            id: 'd2-3', title: 'Box Cricket', category: 'Sports', day: 'Day 2',
+            description: ['Team Sport', 'Limited Overs', 'Knockout'],
+            details: 'Venue: Sports Complex',
+            icon: <Activity size={24} />, color: 'from-orange-500 to-red-600',
+            image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2070'
+        },
+        {
+            id: 'd2-4', title: 'Channel Surfing', category: 'Fun', day: 'Day 2',
+            description: ['Switch Roles', 'Improv', 'Team'],
+            details: 'Venue: Stage',
+            icon: <Radio size={24} />, color: 'from-blue-400 to-teal-400',
+            image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=2070'
+        },
+        {
+            id: 'd2-5', title: 'Dancing', category: 'Cultural', day: 'Day 2',
+            description: ['Group / Solo', 'Choreography', 'Stage'],
+            details: 'Venue: Main Stage',
+            icon: <Music size={24} />, color: 'from-indigo-500 to-purple-600',
+            image: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070'
+        },
+        {
+            id: 'd2-6', title: 'Family Feud', category: 'Fun', day: 'Day 2',
+            description: ['Game Show', 'Team vs Team', 'Survey Says'],
+            details: 'Venue: Auditorium',
+            icon: <Users size={24} />, color: 'from-green-500 to-teal-500',
+            image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070'
+        },
+        {
+            id: 'd2-7', title: 'Fashion Show', category: 'Fashion', day: 'Day 2',
+            description: ['Theme Walk', 'Style & Pose', 'Group'],
+            details: 'Venue: Main Stage',
+            icon: <Shirt size={24} />, color: 'from-purple-500 to-pink-500',
+            image: 'https://images.unsplash.com/photo-1509631179647-b84917154012?q=80&w=2070'
+        },
+        {
+            id: 'd2-8', title: 'Free Fire', category: 'Gaming', day: 'Day 2',
+            description: ['Fair Play', 'Squad', 'Mobile Gaming'],
+            details: 'Venue: E-Sports Arena',
+            icon: <Gamepad2 size={24} />, color: 'from-orange-500 to-red-500',
+            image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070'
+        },
+        {
+            id: 'd2-9', title: 'Guess the Lyrics', category: 'Fun', day: 'Day 2',
+            description: ['Music Quiz', 'Finish the Line', 'Fun'],
+            details: 'Venue: Room 3',
+            icon: <Mic2 size={24} />, color: 'from-cyan-400 to-blue-500',
+            image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070'
+        },
+        {
+            id: 'd2-10', title: 'Instrumentals', category: 'Arts', day: 'Day 2',
+            description: ['Musical Instruments', 'Solo/Band', 'Live'],
+            details: 'Venue: Auditorium',
+            icon: <Music size={24} />, color: 'from-yellow-500 to-orange-500',
+            image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070'
+        },
+        {
+            id: 'd2-11', title: 'K-PoP Quiz', category: 'Quiz', day: 'Day 2',
+            description: ['K-Pop Trivia', 'Idols & Songs', 'Fan Event'],
+            details: 'Venue: Seminar Hall',
+            icon: <HelpCircle size={24} />, color: 'from-violet-500 to-fuchsia-500',
+            image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070'
+        },
+        {
+            id: 'd2-12', title: 'Kollywood Trivia', category: 'Quiz', day: 'Day 2',
+            description: ['Tamil Cinema', 'Actors & Movies', 'Fun'],
+            details: 'Venue: Room 4',
+            icon: <Video size={24} />, color: 'from-red-500 to-orange-500',
+            image: 'https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2070'
+        },
+        {
+            id: 'd2-13', title: 'Mehandi', category: 'Arts', day: 'Day 2',
+            description: ['Henna Art', 'Intricate Designs', 'Time Bound'],
+            details: 'Venue: Art Block',
+            icon: <PenTool size={24} />, color: 'from-green-500 to-emerald-500',
+            image: 'https://images.unsplash.com/photo-1563223168-52fb58dfe7f4?q=80&w=2070'
+        },
+        {
+            id: 'd2-14', title: 'Mime', category: 'Arts', day: 'Day 2',
+            description: ['Silent Act', 'Expression', 'Group'],
+            details: 'Venue: Auditorium',
+            icon: <Smile size={24} />, color: 'from-gray-500 to-slate-600',
+            image: 'https://images.unsplash.com/photo-1460661631160-a562523081ad?q=80&w=2070'
+        },
+        {
+            id: 'd2-15', title: 'Pitch Ur Paper', category: 'Technical', day: 'Day 2',
+            description: ['(Paper Presentation)', 'Team: Max 4', 'All Domains'],
+            details: 'Venue: CSE Lab',
+            icon: <FileText size={24} />, color: 'from-indigo-400 to-cyan-400',
+            image: 'https://images.unsplash.com/photo-1544531835-3a99008aaaae?q=80&w=2070'
+        },
+        {
+            id: 'd2-16', title: 'Robo Race', category: 'Technical', day: 'Day 2',
             description: ['Individual', 'Follow Specs', 'Track Race'],
             details: 'Venue: Open Ground',
             icon: <Bot size={24} />, color: 'from-slate-500 to-gray-700',
             image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070'
         },
         {
-            id: 'd1-15', title: 'Bio-Connect', category: 'Technical', day: 'Day 1',
-            description: ['Team: 2-3 members', 'Presentation Based', 'Projector Provided'],
-            details: 'Venue: Bio Lab',
-            icon: <Activity size={24} />, color: 'from-green-500 to-emerald-600',
-            image: 'https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=2070'
-        },
-        {
-            id: 'd1-16', title: 'Brain Hack', category: 'Technical', day: 'Day 1',
-            description: ['(Problem Pitching)', 'Individual', 'No Gadgets'],
-            details: 'Venue: Classrooms',
-            icon: <BrainCircuit size={24} />, color: 'from-fuchsia-500 to-purple-600',
-            image: 'https://images.unsplash.com/photo-1559757175-5b87cc45f633?q=80&w=2070'
-        },
-
-        // DAY 1 - CREATIVE / CULTURAL / BUSINESS / GAMING
-        {
-            id: 'd1-5', title: 'Pixel Craft', category: 'Creative', day: 'Day 1',
-            description: ['(Poster Design)', 'Platform: Canva', 'Mobile Allowed'],
-            details: 'Venue: Design Lab',
-            icon: <Image size={24} />, color: 'from-pink-400 to-purple-400',
-            image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2070'
-        },
-        {
-            id: 'd1-7', title: 'Shark Tank', category: 'Business', day: 'Day 1',
-            description: ['Idea Pitching', '5-7 Mins', 'Innovation & Feasibility'],
+            id: 'd2-17', title: 'Shark Tank', category: 'Business', day: 'Day 2',
+            description: ['(Idea Pitching)', '5-7 Mins', 'Innovation'],
             details: 'Venue: Auditorium',
-            icon: <Users size={24} />, color: 'from-blue-600 to-cyan-600',
+            icon: <Trophy size={24} />, color: 'from-blue-600 to-cyan-600',
             image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070'
         },
         {
-            id: 'd1-17', title: 'Cosplay', category: 'Cultural', day: 'Day 1',
-            description: ['3 Min Performance', 'Costume & Creativity', 'Individual'],
-            details: 'Venue: Seminar Hall',
-            icon: <Skull size={24} />, color: 'from-red-600 to-orange-600',
-            image: 'https://images.unsplash.com/photo-1612686635542-b27d7920ab0d?q=80&w=2070'
-        },
-        {
-            id: 'd1-18', title: 'Artistry', category: 'Cultural', day: 'Day 1',
-            description: ['Rangoli / Nail Art', 'Drawing / Face Painting', 'Bring Materials'],
-            details: 'Venue: Art Block',
-            icon: <Palette size={24} />, color: 'from-purple-500 to-pink-500',
-            image: 'https://images.unsplash.com/photo-1460661631160-a562523081ad?q=80&w=2070'
-        },
-        {
-            id: 'd1-19', title: 'Free Fire', category: 'Gaming', day: 'Day 1',
-            description: ['Fair Play Mandatory', 'Mobile Gaming', 'Team Event'],
-            details: 'Venue: E-Sports Arena',
-            icon: <Gamepad2 size={24} />, color: 'from-orange-500 to-red-500',
-            image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070'
-        },
-
-        // DAY 2 - FASHION
-        {
-            id: 'd2-1', title: 'Fashion Show', category: 'Fashion', day: 'Day 2',
-            description: ['Corporate Walk', 'Theme Based', 'Team/Individual'],
-            details: 'Venue: Main Stage',
-            icon: <Shirt size={24} />, color: 'from-pink-500 to-rose-500',
-            image: 'https://images.unsplash.com/photo-1509631179647-b84917154012?q=80&w=2070'
-        },
-        {
-            id: 'd2-2', title: 'Mehendi', category: 'Fashion', day: 'Day 2',
-            description: ['Intricate Designs', 'Time Limit', 'Bring Cones'],
-            details: 'Venue: Art Block',
-            icon: <PenTool size={24} />, color: 'from-green-500 to-emerald-500',
-            image: 'https://images.unsplash.com/photo-1563223168-52fb58dfe7f4?q=80&w=2070'
-        },
-
-        // DAY 2 - ONLINE
-        {
-            id: 'd2-3', title: 'Online Events', category: 'Online', day: 'Day 2',
-            description: ['Chess', 'Meme Creation', 'Reels Contest'],
-            details: 'Platform: Online',
-            icon: <Smartphone size={24} />, color: 'from-blue-400 to-indigo-400',
-            image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2070'
-        },
-
-        // DAY 2 - FUN
-        {
-            id: 'd2-4', title: 'Variety Entertain', category: 'Fun', day: 'Day 2',
-            description: ['Singing / Dancing', 'Stand-up Comedy', 'Adptune'],
-            details: 'Venue: Auditorium',
-            icon: <Mic2 size={24} />, color: 'from-yellow-400 to-red-400',
-            image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070'
-        },
-        {
-            id: 'd2-5', title: 'Squid Game', category: 'Fun', day: 'Day 2',
-            description: ['Elimination Games', 'Red Light Green Light', 'Survival'],
+            id: 'd2-18', title: 'Squid Game', category: 'Fun', day: 'Day 2',
+            description: ['Elimination Games', 'Survival', 'Red Light Green Light'],
             details: 'Venue: Open Ground',
             icon: <Skull size={24} />, color: 'from-teal-600 to-pink-600',
             image: 'https://images.unsplash.com/photo-1635334200424-696232236d39?q=80&w=2070'
-        },
-
-        // DAY 2 - QUIZ
-        {
-            id: 'd2-6', title: 'Quiz Mania', category: 'Quiz', day: 'Day 2',
-            description: ['K-pop / Anime', 'Kollywood Trivia', 'Channel Surfing'],
-            details: 'Venue: Seminar Hall',
-            icon: <HelpCircle size={24} />, color: 'from-violet-500 to-purple-500',
-            image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070'
-        },
-
-        // DAY 2 - ARTS
-        {
-            id: 'd2-7', title: 'Stage Arts', category: 'Arts', day: 'Day 2',
-            description: ['Instrumentals', 'Mime', 'Props Allowed'],
-            details: 'Venue: Auditorium',
-            icon: <Music size={24} />, color: 'from-indigo-500 to-blue-500',
-            image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070'
-        },
-
-        // DAY 2 - SPORTS
-        {
-            id: 'd2-8', title: 'Power Sports', category: 'Sports', day: 'Day 2',
-            description: ['Box Cricket', 'Dead Lift', 'Weight Lift'],
-            details: 'Venue: Sports Complex',
-            icon: <Trophy size={24} />, color: 'from-orange-500 to-red-600',
-            image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070'
         }
     ];
 

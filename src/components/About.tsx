@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Music, Rocket } from 'lucide-react';
-import { Meteors } from './ui/meteors';
+import { ElectricCard } from './ui/electric-card';
+import { Lightning } from './ui/lightning';
 
 const About = () => {
     const cards = [
@@ -9,26 +10,28 @@ const About = () => {
             title: "Tech Events",
             icon: <Code size={32} className="text-cyan-400" />,
             desc: "Hackathons, Coding Contests, and Hardware challenges. Prove your technical mettle.",
-            color: "border-cyan-500/20 group-hover:border-cyan-400"
+            colorStr: "#22d3ee" // cyan-400
         },
         {
             title: "Cultural Shows",
             icon: <Music size={32} className="text-purple-400" />,
             desc: "The grand stage for music, dance, and fashion. Artistic expression at its peak.",
-            color: "border-purple-500/20 group-hover:border-purple-400"
+            colorStr: "#c084fc" // purple-400
         },
         {
             title: "Pro Workshops",
             icon: <Rocket size={32} className="text-pink-400" />,
             desc: "Intensive sessions led by industry pioneers. Level up your skill set.",
-            color: "border-pink-500/20 group-hover:border-pink-400"
+            colorStr: "#f472b6" // pink-400
         }
     ];
 
     return (
         <section id="about" className="py-32 relative bg-[#050510] border-y border-white/5">
-            {/* Geometric Background Detail */}
-            <div className="absolute top-0 right-0 w-1/3 h-full bg-[radial-gradient(circle_at_top_right,rgba(6,182,212,0.05),transparent)] pointer-events-none"></div>
+            {/* Lightning Background Effect */}
+            <div className="absolute inset-0 z-0">
+                <Lightning hue={220} speed={0.5} intensity={0.8} />
+            </div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8">
@@ -59,7 +62,7 @@ const About = () => {
                     </motion.div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex flex-wrap justify-center gap-6">
                     {cards.map((card, index) => (
                         <motion.div
                             key={index}
@@ -67,12 +70,10 @@ const About = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1, duration: 0.6 }}
-                            className={`relative p-10 rounded-[2rem] bg-[#0c0c1e] border ${card.color} transition-all duration-500 group overflow-hidden`}
+                            className={`relative p-10 rounded-[2rem] bg-[#0c0c1e] border ${card.colorStr === '#22d3ee' ? 'border-cyan-500/20 group-hover:border-cyan-400' : card.colorStr === '#c084fc' ? 'border-purple-500/20 group-hover:border-purple-400' : 'border-pink-500/20 group-hover:border-pink-400'} transition-all duration-500 group overflow-hidden`}
                         >
                             {/* Decorative Corner */}
                             <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-white/5 to-transparent rounded-bl-3xl"></div>
-
-                            <Meteors number={20} />
 
                             <div className="relative z-10">
                                 <div className="mb-8 p-4 rounded-2xl bg-white/5 w-fit group-hover:scale-110 transition-transform duration-500">

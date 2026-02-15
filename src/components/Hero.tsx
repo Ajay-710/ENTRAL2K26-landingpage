@@ -18,6 +18,8 @@ const Hero = () => {
                 />
             </div>
 
+
+
             {/* Content Layer */}
             <div className="relative z-20 w-full max-w-7xl px-4 flex flex-col items-center text-center">
 

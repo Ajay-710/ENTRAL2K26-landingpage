@@ -6,7 +6,6 @@ import Timeline from './components/Timeline';
 import Highlights from './components/Highlights';
 import Registration from './components/Registration';
 import Footer from './components/Footer';
-import CustomCursor from './components/CustomCursor';
 import { NavBarDemo } from './components/NavBarDemo';
 import CounterLoading from './components/ui/counter-loader';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -19,7 +18,6 @@ function App() {
 
     return (
         <div className="bg-[#050510] min-h-screen text-white selection:bg-cyan-500/30">
-            <CustomCursor />
             <AnimatePresence mode="wait">
                 {loading ? (
                     <motion.div

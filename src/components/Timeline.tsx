@@ -1,5 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { LightSpeed } from './ui/light-speed';
+
 
 const Timeline = () => {
     const schedule = [
@@ -21,8 +22,13 @@ const Timeline = () => {
     ];
 
     return (
-        <section id="timeline" className="py-20 bg-[#050510]">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section id="timeline" className="py-20 bg-[#050510] relative overflow-hidden">
+            {/* LightSpeed Background Effect */}
+            <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+                <LightSpeed />
+            </div>
+
+            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0 }}

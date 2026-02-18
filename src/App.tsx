@@ -1,20 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Hero from './components/Hero';
-import About from './components/About';
-import Events from './components/Events';
-import Timeline from './components/Timeline';
-import Highlights from './components/Highlights';
-import Registration from './components/Registration';
-import Footer from './components/Footer';
-import { NavBarDemo } from './components/NavBarDemo';
+import React, { useState } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Home from './components/Home';
+import EventDetails from './components/EventDetails';
 import CounterLoading from './components/ui/counter-loader';
 import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
     const [loading, setLoading] = useState(true);
-
-    // Timer logic is now handled in CounterLoading via onComplete
-
+    const location = useLocation();
 
     return (
         <div className="bg-[#050510] min-h-screen text-white selection:bg-cyan-500/30">
@@ -36,16 +29,10 @@ function App() {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <NavBarDemo />
-                        <main>
-                            <Hero />
-                            <About />
-                            <Events />
-                            <Timeline />
-                            <Highlights />
-                            <Registration />
-                        </main>
-                        <Footer />
+                        <Routes location={location} key={location.pathname}>
+                            <Route path="/" element={<Home />} />
+                            <Route path="/events/:id" element={<EventDetails />} />
+                        </Routes>
                     </motion.div>
                 )}
             </AnimatePresence>

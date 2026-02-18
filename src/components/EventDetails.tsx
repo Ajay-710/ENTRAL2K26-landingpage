@@ -141,7 +141,7 @@ const EventDetails = () => {
                             <p className="text-gray-400">Join us for this exciting event and showcase your skills!</p>
 
                             {/* Assuming the main Registration component is reachable or we just link to a form */}
-                            <button className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg uppercase tracking-widest shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all">
+                            <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="w-full py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg uppercase tracking-widest shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:scale-[1.02] transition-all">
                                 Register Now
                             </button>
                             <p className="text-xs text-gray-500">

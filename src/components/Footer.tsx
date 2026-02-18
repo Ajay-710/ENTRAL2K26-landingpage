@@ -37,7 +37,7 @@ const Footer = () => {
                                         onClick={(e) => {
                                             if (item === 'Register') {
                                                 e.preventDefault();
-                                                alert("Registration link opens soon!");
+                                                window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank');
                                             }
                                         }}
                                         className="text-gray-400 hover:text-cyan-400 transition-colors uppercase text-sm tracking-widest font-bold"

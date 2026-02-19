@@ -6,7 +6,6 @@ const Highlights = () => {
     const stats = [
         { icon: <Users size={32} />, value: "3000+", label: "Participants" },
         { icon: <Trophy size={32} />, value: "40+", label: "Events" },
-        { icon: <Gift size={32} />, value: "₹5 Lakhs", label: "Prize Pool" },
         { icon: <Star size={32} />, value: "3", label: "Pro Shows" }, // Typo intentional? Probably "Pro Shows"
     ];
 

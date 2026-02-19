@@ -57,7 +57,7 @@ export const Lightning: React.FC<LightningProps> = ({
 
       // Convert HSV to RGB.
       vec3 hsv2rgb(vec3 c) {
-          vec3 rgb = clamp(abs(mod(c.x * 6.0 + vec3(0.0,4.0,2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
+          vec3 rgb = clamp(abs(mod(vec3(c.x * 6.0) + vec3(0.0,4.0,2.0), 6.0) - 3.0) - 1.0, 0.0, 1.0);
           return c.z * mix(vec3(1.0), rgb, c.y);
       }
 // ... (omitting lines for brevity in thought, but I will target the specific blocks in the tool call)
@@ -117,7 +117,8 @@ export const Lightning: React.FC<LightningProps> = ({
           uv.x += uXOffset;
           
           // Adjust uv based on size and animate with speed.
-          uv += 2.0 * fbm(uv * uSize + 0.8 * iTime * uSpeed) - 1.0;
+          float t = 0.8 * iTime * uSpeed;
+          uv += vec2(2.0 * fbm(uv * uSize + vec2(t)) - 1.0);
           
           float dist = abs(uv.x);
           // Compute base color using hue.

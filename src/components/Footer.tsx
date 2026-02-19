@@ -19,7 +19,7 @@ const Footer = () => {
                             "The Greatest of <span className="text-cyan-400">Alpha</span> Time"
                         </p>
                         <div className="flex space-x-4">
-                            <a href="https://www.instagram.com/enthral2k26/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cyan-600 transition-all">
+                            <a href="https://www.instagram.com/enthral.ace/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-cyan-600 transition-all">
                                 <Instagram size={20} />
                             </a>
 

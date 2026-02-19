@@ -40,7 +40,7 @@ const Registration = () => {
                     className="p-1 rounded-3xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500"
                 >
                     <div className="bg-[#0f0f25] rounded-[22px] p-8 md:p-16 relative overflow-hidden">
-                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 bg-repeat"></div>
+                        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 bg-repeat pointer-events-none"></div>
 
                         <h2 className="text-3xl md:text-5xl font-orbitron font-bold text-white mb-6">
                             Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Join Us?</span>

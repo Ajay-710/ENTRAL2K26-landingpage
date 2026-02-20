@@ -57,7 +57,7 @@ const Footer = () => {
                                 <MapPin className="w-5 h-5 text-cyan-500 mt-1 shrink-0" />
                                 <span>
                                     Alpha College of Engineering, <br />
-                                    College Ground, Tech Hub
+                                    Thirumazhisai, Chennai
                                 </span>
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
@@ -66,7 +66,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-cyan-500 shrink-0" />
-                                <span>+91 98765 43210</span>
+                                <span>+91 9944537321</span>
                             </li>
                         </ul>
                     </div>

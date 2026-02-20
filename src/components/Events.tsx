@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import { events } from '../data/events';
 
 const Events = () => {
-    const [activeDay, setActiveDay] = useState<'Day 1' | 'Day 2'>('Day 1');
+    const [activeDay, setActiveDay] = useState<'Day 1' | 'Day 2' | 'Online'>('Day 1');
     const [activeCategory, setActiveCategory] = useState('All');
 
     const filteredEvents = events.filter(e => {
         const matchesDay = e.day === activeDay;
         const matchesCategory = activeCategory === 'All' || e.category === activeCategory;
         return matchesDay && matchesCategory;
-    });
+    }).sort((a, b) => a.title.localeCompare(b.title));
 
     const categories = ['All', ...Array.from(new Set(events.filter(e => e.day === activeDay).map(e => e.category)))];
 
@@ -38,7 +38,7 @@ const Events = () => {
 
                     {/* Day Toggle */}
                     <div className="flex justify-center gap-6 mb-12">
-                        {(['Day 1', 'Day 2'] as const).map((day) => (
+                        {(['Day 1', 'Day 2', 'Online'] as const).map((day) => (
                             <button
                                 key={day}
                                 onClick={() => { setActiveDay(day); setActiveCategory('All'); }}
@@ -118,10 +118,7 @@ const Events = () => {
                                                 </p>
                                             ))}
                                         </div>
-                                        <div className="pt-4 border-t border-white/10 flex items-center justify-between">
-                                            <p className="text-cyan-500 text-xs font-bold uppercase tracking-widest">
-                                                {event.details}
-                                            </p>
+                                        <div className="pt-4 border-t border-white/10 flex items-center justify-end">
                                             <Link
                                                 to={`/events/${event.id}`}
                                                 className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-cyan-500 hover:text-black transition-all group-hover:bg-cyan-500 group-hover:text-black"

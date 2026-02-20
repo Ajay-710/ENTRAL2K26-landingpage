@@ -64,9 +64,18 @@ const Footer = () => {
                                 <Mail className="w-5 h-5 text-cyan-500 shrink-0" />
                                 <span>enthral.info@gmail.com</span>
                             </li>
-                            <li className="flex items-center gap-3 text-gray-400">
-                                <Phone className="w-5 h-5 text-cyan-500 shrink-0" />
-                                <span>+91 9944537321</span>
+                            <li className="flex items-start gap-3 text-gray-400">
+                                <Phone className="w-5 h-5 text-cyan-400 mt-1 shrink-0" />
+                                <div className="space-y-3">
+                                    <div>
+                                        <p className="text-white font-bold text-sm tracking-wide">Stanly Rumald F</p>
+                                        <p className="text-xs font-medium">+91 9944537321</p>
+                                    </div>
+                                    <div>
+                                        <p className="text-white font-bold text-sm tracking-wide">Ashvitha V</p>
+                                        <p className="text-xs font-medium">+91 73059 71495</p>
+                                    </div>
+                                </div>
                             </li>
                         </ul>
                     </div>

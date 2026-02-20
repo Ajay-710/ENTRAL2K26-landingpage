@@ -79,22 +79,22 @@ export const events: Event[] = [
         title: 'Debugging Contest',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Find Errors', 'Individual', 'Points Based'],
+        description: [
+            'The Debugging Contest requires participants to identify and fix errors in given code to produce the correct output. The event consists of two rounds.',
+            'Round 1: Based on C programming with code snippets (MCQ/Short Answer format)',
+            'Round 2: Based on Java programming where participants must debug complete programs'
+        ],
         details: 'Venue: Room 1',
         icon: <Bug size={24} />,
         color: 'from-red-500 to-pink-600',
         image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070',
         rules: [
-            'Number of participants per college:4',
-            'Number of participants:1',
-            'Participants will be evaluated individually.',
-            'For Preliminary Round: A set of 5 Questions will be given to each participant',
-            'For rectifying each error, 2 points will be awarded',
-            'If the participant got output, bonus points will be awarded (4 points)',
-            'Based on the points, the participants will be selected for the final round',
-            'The final round, the rules will be the same as the preliminary round.'
+            'Number of participants: 1 participant (Individual)',
+            'Number of participants per college: Maximum 4 participants',
+            'Strictly Prohibited: No internet access is allowed.',
+            'Strictly Prohibited: Use of mobile phones, external storage devices, or any external help is strictly prohibited.',
+            'Warning: Any malpractice will lead to immediate disqualification.'
         ],
-        duration: 'Preliminary round: 15 min + final round: 15min',
         prizes: ['First Prize', 'Second Prize']
     },
     {
@@ -102,20 +102,25 @@ export const events: Event[] = [
         title: 'Hackathon',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Software/App/Web', '1-2 Hours', 'Team 1-4'],
+        description: [
+            'Hackathon is a team-based innovation event where participants build solutions for problem statements provided at the start of the competition.'
+        ],
         details: 'Venue: IT Lab',
         icon: <Terminal size={24} />,
         color: 'from-cyan-500 to-blue-500',
         image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070',
         rules: [
-            'Number of Teams per college : 2 .',
-            'Number of participants per team : 1-4 members.',
-            'The hackathon topic will be announced on the spot. It can include areas such as software development, app building, website design, or any relevant technical challenge.',
-            'Project Submission: Teams must submit their working project (code, app, website, etc.) by the specified deadline.',
-            'Presentation: Teams must present their solutions in 5–10 minutes at the end of the event.',
-            'Students recommended to bring their own laptops'
+            'Number of participants per team: Maximum 3 per team',
+            'Number of teams per college: Maximum 2 teams',
+            'Domains: AIML, IoT, Healthcare, Smart Agriculture & AgriTech, Disaster Response, EnviroTech',
+            'Teams must build and develop the solution only during the hackathon hours.',
+            'Participants must bring their own laptops.',
+            'Strictly Prohibited: Pre-built projects are strictly prohibited.',
+            'Allowed: Use of open-source libraries, APIs, and frameworks is allowed.',
+            'External help from mentors, faculty, or online communities is not permitted unless officially allowed.',
+            'Internet: Internet usage is allowed unless specified otherwise by coordinators.'
         ],
-        duration: '1 to 2 hours',
+        duration: '3 hours',
         prizes: ['First Prize', 'Second Prize']
     },
     {
@@ -184,15 +189,21 @@ export const events: Event[] = [
         title: 'Coding Contest',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Competitive', 'Logic', 'Algorithms'],
+        description: [
+            'The coding contest consists of two rounds. Participants must solve coding problems within the allotted time.',
+            'Round 1: Based on Python programming',
+            'Round 2: Based on Java programming',
+            'Selection for Round 2 will depend on Round 1 performance.'
+        ],
         details: 'Venue: CSE Lab',
         icon: <Code2 size={24} />,
         color: 'from-blue-600 to-indigo-600',
         image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070',
         rules: [
-            'Individual or Team participation.',
-            'Solve algorithmic problems.',
-            'Allowed languages: C, C++, Java, Python.'
+            'Number of participants: 1 participant (Individual)',
+            'Number of participants per college: Maximum 4 members',
+            'Strictly Prohibited: Use of internet, mobile phones, or any external help is strictly prohibited.',
+            'Warning: Any form of malpractice will lead to immediate disqualification.'
         ]
     },
     {
@@ -200,15 +211,21 @@ export const events: Event[] = [
         title: 'Electro Hunt',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Circuits', 'Components', 'Hunt'],
+        description: [
+            'Electro Hunt is a clue-based technical hunt where teams solve a series of technical clues related to electronics and engineering concepts. Participants must solve each clue to progress to the next level, and the team completing all tasks in the shortest time will win.'
+        ],
         details: 'Venue: Electronics Lab',
         icon: <Cpu size={24} />,
         color: 'from-yellow-500 to-amber-500',
         image: 'https://images.unsplash.com/photo-1555664424-778a69032334?q=80&w=2070',
         rules: [
-            'Identify electronic components.',
-            'Solve circuit puzzles.',
-            'Fastest team wins.'
+            'Number of participants: 2-4 participants per team',
+            'Number of teams per college: 1-3 teams',
+            'Teams must follow the clue sequence strictly.',
+            'Strictly Prohibited: Any form of cheating or external help will lead to disqualification.',
+            'Strictly Prohibited: Use of mobile phones or internet is strictly prohibited (if applicable).',
+            'Teams must maintain discipline and avoid damaging college property.',
+            'Judging Criteria: Based on accuracy of answers, speed of completion, and team coordination.'
         ]
     },
     {
@@ -216,15 +233,18 @@ export const events: Event[] = [
         title: 'Instolutions',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Instrumentation', 'Solutions', 'Innovation'],
+        description: [
+            'Instolutions is a problem-solving event where teams analyze given problem statements and propose practical and innovative solutions. Participants will present their solution before judges.'
+        ],
         details: 'Venue: Hall 2',
         icon: <Lightbulb size={24} />,
         color: 'from-cyan-400 to-blue-400',
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070',
         rules: [
-            'Propose solutions to instrumentation problems.',
-            'Innovative ideas.',
-            'Presentation.'
+            'Number of participants: 2 participants per team',
+            'Number of teams per college: Maximum 2 teams',
+            'Teams must present their solution clearly within the given time limit on a chart.',
+            'Strictly Prohibited: Use of mobile phones or external help is strictly prohibited.'
         ]
     },
     {
@@ -280,19 +300,28 @@ export const events: Event[] = [
         title: 'Drawing',
         category: 'Arts',
         day: 'Day 1',
-        description: ['On Spot Topic', 'Stationery Required', 'Individual'],
+        description: [
+            'Drawing is an individual art competition where participants create artwork based on a topic given on the spot within the allotted time. Participants must produce original artwork using their own materials during the event.'
+        ],
         details: 'Venue: Art Block',
         icon: <PenTool size={24} />,
         color: 'from-yellow-500 to-orange-500',
         image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070',
         rules: [
-            'Number of participants per college: 4',
-            'Number of participants:1',
-            'Participants should bring their stationery items.',
-            'The topic will be given on the spot',
-            'Drawing sheets or charts will be provided.'
+            'Number of participants: 1 participant (Individual)',
+            'Number of participants per college: 3-4 participants',
+            'Topic will be given on the spot.',
+            'Participants must bring their own drawing and stationery materials.',
+            'A3/chart paper will be provided by the organizers.',
+            'Artwork must be original and created only during the event time.',
+            'No tracing is allowed.',
+            'No printed materials or reference copies are permitted.',
+            'Mobile phones are strictly prohibited.',
+            'Sharing of materials between participants is not allowed.',
+            'Only one artwork must be submitted per participant.',
+            'Warning: Any offensive or inappropriate content will lead to disqualification.'
         ],
-        duration: '45 min'
+        duration: '60 minutes (strictly time-bound)'
     },
     {
         id: 'd1-nailart',
@@ -335,15 +364,27 @@ export const events: Event[] = [
         title: 'Corporate Walk',
         category: 'Cultural',
         day: 'Day 1',
-        description: ['Formal', 'Style', 'Walk'],
+        description: [
+            'Corporate Walk is a themed ramp walk event where teams present corporate formal attire with confidence, poise, and unique style.',
+            'The performance should reflect the elegance and professionalism of corporate culture.',
+            'Theme: Corporate Formal Attire (Western Wear & Formal)'
+        ],
         details: 'Venue: Stage',
-        icon: <Users size={24} />,
+        icon: <Shirt size={24} />,
         color: 'from-slate-500 to-gray-600',
         image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070',
         rules: [
-            'Formal attire required.',
-            'Judged on attitude and style.',
-            'Group participation.'
+            'No. of participants: 7-8 participants per team',
+            'Number of teams per college: Maximum 1 team',
+            'Time limit is 4-6 minutes per team.',
+            'Teams are allowed to use only theme-based props.',
+            'Props must be safe and should not damage the stage.',
+            'Music must be submitted in MP3 format.',
+            'Attire must reflect professionalism and strictly follow the theme.',
+            'Vulgarity or inappropriate gestures are strictly prohibited.',
+            'No stage rehearsals will be allowed before the event.',
+            'Only registered participants are allowed on stage.',
+            'Warning: Any misconduct or violation of rules may lead to immediate disqualification.'
         ]
     },
     {
@@ -351,16 +392,23 @@ export const events: Event[] = [
         title: 'Face Painting',
         category: 'Arts',
         day: 'Day 1',
-        description: ['Colors', 'Creative', 'Theme'],
+        description: [
+            'Face Painting is a creative competition conducted in a single round where participants paint live on one model.'
+        ],
         details: 'Venue: Hall 4',
         icon: <Palette size={24} />,
         color: 'from-red-500 to-yellow-500',
         image: 'https://images.unsplash.com/photo-1558244243-7f83e079737e?q=80&w=2070',
         rules: [
-            'Bring your own paints - skin safe only.',
-            'Theme defined on spot.',
-            'Time limit 1 hour.'
-        ]
+            'Number of participants: 2 per team (1 artist + 1 model)',
+            'Number of teams per college: 2 teams',
+            'The competition will be conducted in one single round.',
+            'Theme will be announced on the spot.',
+            'Face painting must be done live on one model during the event.',
+            'Strictly Prohibited: Pre-drawn designs, stencils, reference images, and mobile phones.',
+            'Warning: Any inappropriate design or violation of rules may lead to disqualification.'
+        ],
+        duration: '45–60 minutes (strictly time-bound)'
     },
     {
         id: 'd1-rangoli',

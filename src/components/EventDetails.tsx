@@ -118,9 +118,9 @@ const EventDetails = () => {
                                 {event.duration && (
                                     <p className="text-amber-200/80 text-sm font-medium">
                                         <span className="text-amber-500 font-bold">
-                                            {event.duration.toLowerCase().startsWith('act time') ? 'Act Time: ' : event.duration.toLowerCase().startsWith('time limit') ? 'Time Limit: ' : 'Duration: '}
+                                            {event.duration.toLowerCase().startsWith('act time') ? 'Act Time: ' : event.duration.toLowerCase().startsWith('editing time') ? 'Editing Time: ' : event.duration.toLowerCase().startsWith('time limit') ? 'Time Limit: ' : 'Duration: '}
                                         </span>
-                                        {event.duration.replace(/^Act time\s*/i, '').replace(/^Time Limit\s*/i, '').replace(/^Time limit\s*/i, '').replace(/^duration:?\s*/i, '')}
+                                        {event.duration.replace(/^Act time\s*/i, '').replace(/^Time Limit\s*/i, '').replace(/^Time limit\s*/i, '').replace(/^duration:?\s*/i, '').replace(/^Editing Time:?\s*/i, '')}
                                     </p>
                                 )}
 

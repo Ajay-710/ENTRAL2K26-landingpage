@@ -888,7 +888,7 @@ export const events: Event[] = [
             'Soft copies should be submitted in PDF format.',
             'Email: Kindly mail your abstract, paper and ppt to enthral@alphagroup.edu',
             'The teams will get 10 minutes for presentation followed by a Q&A session.',
-            'Participants from different institutions can be part of the same team. However, one participant may not be a part of multiple teams for the same event.'
+            'Participants from different institutions can be a part of the same team. However, one participant may not be a part of multiple teams for the same event.'
         ]
     },
     {
@@ -960,7 +960,6 @@ export const events: Event[] = [
             'The reel must have clear audio and good video quality with proper lighting.',
             'Warning: Any inappropriate or irrelevant content will lead to disqualification.'
         ],
-        duration: 'Editing Time : 60 mins.',
-        prizes: ['First Prize', 'Second Prize']
+        duration: 'Editing Time: 60 mins'
     }
 ];

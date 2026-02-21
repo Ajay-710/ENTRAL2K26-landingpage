@@ -9,6 +9,12 @@
         @apply bg-[#050510] text-white;
         caret-color: transparent;
     }
+
+    @media (min-width: 768px) {
+        * {
+            cursor: none !important;
+        }
+    }
 }
 
 /* Custom Utilities if needed */

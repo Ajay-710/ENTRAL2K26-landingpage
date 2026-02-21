@@ -23,6 +23,7 @@ export interface Event {
     duration?: string;
     contact?: string;
     note?: string;
+    theme?: string;
 }
 
 export const events: Event[] = [
@@ -252,7 +253,7 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070',
         rules: [
             'Number of participants: 2 participants per team',
-            'Number of teams per college: Maximum 2 teams',
+            'Per College: Maximum 2 teams',
             'Teams must present their solution clearly within the given time limit on a chart.',
             'Strictly Prohibited: Use of mobile phones or external help is strictly prohibited.'
         ]
@@ -350,13 +351,13 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?q=80&w=2070',
         rules: [
             'Number of participants: 2 participants per team',
-            'Number of teams per college: Maximum 2 teams',
+            'Per College: Maximum 2 teams',
             'Participants must create nail art on one hand (minimum 3-5 nails) or both hands as specified by organizers.',
             'Designs should include basic nail art techniques, theme-based elements, and creative detailing.',
             'Strictly Prohibited: Pre-painted nails, pre-designed tips, reference images, and mobile phones.',
             'Only nail art materials are allowed.'
         ],
-        duration: '45-60 minutes (strictly time-bound)'
+        duration: 'Time Limit: 45-60 minutes (strictly time-bound)'
     },
     {
         id: 'd1-singing',
@@ -406,7 +407,8 @@ export const events: Event[] = [
             'No stage rehearsals will be allowed before the event.',
             'Only registered participants are allowed on stage.',
             'Warning: Any misconduct or violation of rules may lead to immediate disqualification.'
-        ]
+        ],
+        theme: 'Corporate Formal Attire (Western Wear & Formal)'
     },
     {
         id: 'd1-facepainting',
@@ -445,17 +447,17 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1601306385499-a8647c20c9db?q=80&w=2070',
         rules: [
             'Number of participants: Maximum 4 per team',
-            'Number of teams per college: Maximum 2 teams',
+            'Per College: Maximum 2 teams',
             'The competition will be conducted in one single round.',
             'Theme will be announced on the spot.',
             'Participants must bring their own required materials.',
             'Rangoli must be created only during the event time.',
             'Strictly Prohibited: Use of mobile phones, printed materials, or reference images is strictly prohibited.',
-            'Materials allowed: rangoli powder, flower petals, colored sand, rice/pulses, eco-friendly decorative items.',
+            'Allowed: Materials allowed: rangoli powder, flower petals, colored sand, rice/pulses, eco-friendly decorative items.',
             'Designs must be decent and suitable for a college environment.',
             'Warning: Any violation of rules may lead to disqualification.'
         ],
-        duration: '2 hours (strictly time-bound)'
+        duration: 'Time Limit: 2 hours (strictly time-bound)'
     },
     {
         id: 'd1-standup',

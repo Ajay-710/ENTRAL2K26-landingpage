@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './components/Home';
 import EventDetails from './components/EventDetails';
 import CounterLoading from './components/ui/counter-loader';
+import CustomCursor from './components/ui/CustomCursor';
 import { AnimatePresence, motion } from 'framer-motion';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
     return (
         <div className="bg-[#050510] min-h-screen text-white selection:bg-cyan-500/30">
+            <CustomCursor />
             <AnimatePresence mode="wait">
                 {loading ? (
                     <motion.div

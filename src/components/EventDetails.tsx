@@ -75,10 +75,10 @@ const EventDetails = () => {
 
                             <div className="space-y-6">
                                 <div>
-                                    <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">Per Participation</p>
+                                    <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">No. of Participants</p>
                                     <div className="flex items-baseline gap-2">
                                         <p className="text-white font-bold text-lg leading-tight">
-                                            {participantCountRule.replace(/Number of participants[:\s]*/i, '').replace(/per team[:\s]*/i, '')}
+                                            {participantCountRule.replace(/Number of participants[:\s]*/i, '')}
                                         </p>
                                     </div>
                                 </div>
@@ -126,6 +126,24 @@ const EventDetails = () => {
 
                             </div>
                         </div>
+
+                        {/* Theme Card */}
+                        {event.theme && (
+                            <div className="bg-[#0f1020]/80 backdrop-blur-md border border-amber-500/10 rounded-3xl p-6 shadow-xl relative overflow-hidden group">
+                                <div className="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                                <div className="flex items-start gap-4 relative z-10">
+                                    <div className="text-amber-500 mt-1 shrink-0">
+                                        <Palette size={20} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-sm font-bold text-amber-500 mb-1">Theme</h3>
+                                        <p className="text-gray-200 text-sm leading-relaxed">
+                                            {event.theme}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
 
                     {/* Right Column (Rules) */}

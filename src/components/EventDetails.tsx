@@ -24,8 +24,8 @@ const EventDetails = () => {
     }
 
     // Helper to extract "Per College" limit from rules
-    const perCollegeRule = event.rules?.find(r => r.toLowerCase().includes('participants per college') || r.toLowerCase().includes('teams per college')) || 'See details';
-    const otherRules = event.rules?.filter(r => !r.toLowerCase().includes('participants per college') && !r.toLowerCase().includes('teams per college')) || [];
+    const perCollegeRule = event.rules?.find(r => r.toLowerCase().includes('participants per college') || r.toLowerCase().includes('teams per college') || r.toLowerCase().includes('per college')) || 'See details';
+    const otherRules = event.rules?.filter(r => !(r.toLowerCase().includes('participants per college') || r.toLowerCase().includes('teams per college') || r.toLowerCase().includes('per college'))) || [];
 
     // Sort rules: "Number of participants" first if exists in otherRules
     otherRules.sort((a, b) => {
@@ -86,7 +86,7 @@ const EventDetails = () => {
                                 <div>
                                     <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">Per College</p>
                                     <p className="text-white font-bold text-lg leading-tight">
-                                        {perCollegeRule.replace(/Number of (teams|participants) per college[:\s]*/i, '')}
+                                        {perCollegeRule.replace(/Number of (teams|participants) per college[:\s]*/i, '').replace(/Per College[:\s]*/i, '')}
                                     </p>
                                 </div>
                             </div>

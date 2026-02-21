@@ -125,25 +125,28 @@ export const events: Event[] = [
     },
     {
         id: 'd1-pixelcraft', // Was Poster Making
-        title: 'Pixel Craft',
+        title: 'Pixel Craft (Poster Design)',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Adobe PS/PowerPoint', 'Team of 2', 'On Spot'],
+        description: [
+            'Pixel Craft is a digital poster design competition where participants create posters using Canva based on a theme given on the spot.'
+        ],
         details: 'Venue: Design Lab',
         icon: <Image size={24} />,
         color: 'from-purple-500 to-cyan-500',
         image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2070',
         rules: [
-            'Number of teams per college: 4',
-            'Number of participants per team: 2',
-            '15 minutes to search content on the internet.',
-            '30 minutes to prepare poster.',
-            '5 minutes to explain the poster.',
-            'Plagiarism of any type will lead to disqualification.',
-            'Poster size should not exceed A4 size.',
-            'The poster can be made by using [Adobe PS] and [Power Point].'
+            'Number of participants: 1 participant (Individual)',
+            'Number of participants per college: Maximum 4 members',
+            'Platform: Canva (mobile usage is allowed)',
+            'Theme will be given on the spot.',
+            'The poster must be designed during the event time only.',
+            'Strictly Prohibited: No pre-designed templates are allowed.',
+            'Strictly Prohibited: Plagiarism or copying from internet sources is strictly prohibited.',
+            'Posters must be original and creative.',
+            'Warning: Any violation of rules may lead to immediate disqualification.'
         ],
-        duration: '50 mins',
+        duration: '60 minutes (strictly time-bound)',
         prizes: ['First Prize', 'Second Prize']
     },
     {
@@ -151,16 +154,26 @@ export const events: Event[] = [
         title: 'Prompting War',
         category: 'Technical',
         day: 'Day 1',
-        description: ['AI Prompting', 'Image/Text Gen', 'Creativity'],
+        description: [
+            'Prompting War is a technical event where participants design and develop a website based on the given topic within the allotted time using HTML, CSS, and JavaScript.'
+        ],
         details: 'Venue: Lab',
         icon: <Bot size={24} />,
         color: 'from-emerald-500 to-green-500',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070',
         rules: [
-            'Participants must use provided AI tools.',
-            'Prompts must be original.',
-            'Judged on accuracy and creativity of result.'
-        ]
+            'Number of participants: Individual or Team (Max 3)',
+            'Number of teams per college: Maximum 2 teams',
+            'The competition will be conducted in a single round.',
+            'Topic/theme will be announced on the spot.',
+            'Participants must bring their own laptop.',
+            'Website must be designed and developed only during the event hours.',
+            'Strictly Prohibited: Pre-built templates are not allowed.',
+            'Strictly Prohibited: Plagiarism is strictly prohibited.',
+            'Warning: Any copied code/design will lead to immediate disqualification.',
+            'Participants must maintain discipline and follow coordinators\' instructions.'
+        ],
+        duration: '2-3 hours (strictly time-bound)'
     },
     {
         id: 'd1-bioconnect',
@@ -249,22 +262,25 @@ export const events: Event[] = [
     },
     {
         id: 'd1-protofest', // Was Project Expo
-        title: 'ProtoFest',
+        title: 'ProtoFest (Project Expo)',
         category: 'Technical',
         day: 'Day 1',
-        description: ['Working Models', 'All Domains', 'Innovation'],
+        description: [
+            'ProtoFest is a project exhibition where participants present innovative projects through display, demonstration, and technical evaluation. The event includes a viva session and interaction with judges.'
+        ],
         details: 'Venue: SLC',
         icon: <Cpu size={24} />,
         color: 'from-blue-400 to-teal-400',
         image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070',
         rules: [
-            'Any student from any discipline can submit their ideas.',
-            'No. of participants per team: Maximum 3',
-            'The competition is open to all students from various institutes.',
-            'A team member can participate in only one project presentation.',
-            'Multiple project ideas can be submitted, and the best ones will be filtered out.',
-            'Teams will be given a space to set up their model/design at the venue.',
-            'Participants should bring all their requirements to execute their project.'
+            'Number of participants: Individual or Team (Max 3)',
+            'Number of teams per college: Maximum 3 teams',
+            'Participation is open to all domains.',
+            'Projects must be original, innovative, and domain-relevant.',
+            'A one-page abstract must be submitted before the deadline.',
+            'Teams must bring all required hardware and software components.',
+            'Working model or prototype is preferred.',
+            'Each participant/team will get 5-10 minutes for presentation.'
         ],
         prizes: ['First Prize', 'Second Prize']
     },
@@ -328,35 +344,45 @@ export const events: Event[] = [
         title: 'Nail Art',
         category: 'Arts',
         day: 'Day 1',
-        description: ['Creative', 'Design', 'Style'],
+        description: [
+            'Nail Art is a creative competition conducted in a single round where participants design nail art on the spot based on given requirements.'
+        ],
         details: 'Venue: Hall 3',
         icon: <Palette size={24} />,
         color: 'from-pink-400 to-purple-400',
         image: 'https://images.unsplash.com/photo-1632516643720-e7f5d7d6ecc9?q=80&w=2070',
         rules: [
-            'Bring your own materials.',
-            'Time limit: 30 mins.',
-            'Creative designs.'
-        ]
+            'Number of participants: 2 participants per team',
+            'Number of teams per college: Maximum 2 teams',
+            'Participants must create nail art on one hand (minimum 3-5 nails) or both hands as specified by organizers.',
+            'Designs should include basic nail art techniques, theme-based elements, and creative detailing.',
+            'Strictly Prohibited: Pre-painted nails, pre-designed tips, reference images, and mobile phones.',
+            'Only nail art materials are allowed.'
+        ],
+        duration: '45-60 minutes (strictly time-bound)'
     },
     {
         id: 'd1-singing',
         title: 'Singing',
         category: 'Cultural',
         day: 'Day 1',
-        description: ['Solo/Group', 'Carnatic/Light', 'No Vulgarity'],
+        description: [
+            'Singing is a performance event where participants present solo or group songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.'
+        ],
         details: 'Venue: Auditorium',
         icon: <Mic2 size={24} />,
         color: 'from-blue-400 to-purple-500',
         image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070',
         rules: [
-            'Number of teams per college: 4',
-            'Solo performance and group performance are allowed with the maximum participants per team of 5(including instrument players)',
-            'Participants must bring essential instruments/Karaoke .',
-            'Type of song (Carnatic or Light Music) to be mentioned at the time of registration.',
-            'The song chosen must not contain any vulgarity or offend any religion or community. Violation of this results in disqualification.'
+            'Number of participants: Solo or Group (max 5)',
+            'Number of teams per college: Maximum 2 teams',
+            'Participants must bring their own instruments or karaoke track if required.',
+            'Content Restriction: Songs must not contain vulgar lyrics or content that may offend any religion or community.',
+            'Performances must maintain dignity and decorum.',
+            'Exceeding the time limit may lead to negative marking or disqualification.',
+            'Warning: Any violation of rules will result in immediate disqualification.'
         ],
-        duration: '3 minutes',
+        duration: 'Maximum 3 minutes',
         prizes: ['First Prize', 'Second Prize']
     },
     {
@@ -415,37 +441,49 @@ export const events: Event[] = [
         title: 'Rangoli',
         category: 'Arts',
         day: 'Day 1',
-        description: ['No Theme', 'Colors Only', 'Team of 4'],
+        description: [
+            'Rangoli is a creative team event where participants design rangoli based on a theme announced on the spot within the allotted time.'
+        ],
         details: 'Venue: Corridor',
         icon: <Palette size={24} />,
         color: 'from-orange-500 to-red-500',
         image: 'https://images.unsplash.com/photo-1601306385499-a8647c20c9db?q=80&w=2070',
         rules: [
-            'Number of teams per college: 4',
-            'Number of participants per team: 4',
-            'There will be only one round of competition',
-            'There is no theme for rangoli',
-            'Teams will be responsible for arrangements of the material required to prepare rangoli',
-            'Only rangoli colors can be used for making rangoli',
-            'The participants will not be allowed to refer any printed material, mobile etc....for preparing rangoli'
+            'Number of participants: Maximum 4 per team',
+            'Number of teams per college: Maximum 2 teams',
+            'The competition will be conducted in one single round.',
+            'Theme will be announced on the spot.',
+            'Participants must bring their own required materials.',
+            'Rangoli must be created only during the event time.',
+            'Strictly Prohibited: Use of mobile phones, printed materials, or reference images is strictly prohibited.',
+            'Materials allowed: rangoli powder, flower petals, colored sand, rice/pulses, eco-friendly decorative items.',
+            'Designs must be decent and suitable for a college environment.',
+            'Warning: Any violation of rules may lead to disqualification.'
         ],
-        duration: '2 hours'
+        duration: '2 hours (strictly time-bound)'
     },
     {
         id: 'd1-standup',
         title: 'Stand-Up Comedy',
         category: 'Fun',
         day: 'Day 1',
-        description: ['Humor', 'Solo', 'Entertainment'],
+        description: [
+            'Stand-Up Comedy is an individual performance event where participants present original comedy content live on stage.'
+        ],
         details: 'Venue: Stage',
         icon: <Mic2 size={24} />,
         color: 'from-yellow-400 to-amber-500',
         image: 'https://images.unsplash.com/photo-1585699324551-f6c309eedeca?q=80&w=2070',
         rules: [
-            'No offensive content.',
-            'Time limit 5 minutes.',
-            'Original content only.'
-        ]
+            'Number of participants: 1 participant (Individual)',
+            'Number of participants per college: Maximum 2 members',
+            'Content must be original and performed live on stage.',
+            'Language must be decent, respectful, and college-appropriate.',
+            'Strictly Prohibited: Offensive, abusive, political, or religious content is strictly prohibited.',
+            'Strictly Prohibited: Participants are not allowed to use scripts or mobile phones on stage.',
+            'Warning: Any vulgarity or inappropriate gestures may lead to immediate disqualification.'
+        ],
+        duration: '3-5 minutes (strictly time-bound)'
     },
 
     // DAY 2 EVENTS
@@ -454,77 +492,93 @@ export const events: Event[] = [
         title: 'APL Auction',
         category: 'Fun',
         day: 'Day 2',
-        description: ['IPL Quiz', 'Auction', 'Player Ratings'],
+        description: [
+            'Round 1 - APL Quiz: Duration: 30 minutes. Quiz based on IPL and cricket knowledge. Top 10 teams qualify for Round 2.',
+            'Round 2 - APL Auction: Duration: Minimum 2 hours. Teams bid for players to build their squad.'
+        ],
         details: 'Venue: Seminar Hall',
         icon: <Gavel size={24} />,
         color: 'from-yellow-500 to-amber-600',
         image: 'https://images.unsplash.com/photo-1577416412292-807187673842?q=80&w=2070',
         rules: [
-            'Number of participants per team: 2-4',
-            'Number of teams per college: 3',
-            'Two rounds: Round 1- IPL Quiz, round 2- Auction (Top 10 Teams from Quiz)',
-            'Judgment based on players ratings',
-            'Phones/Laptops are not allowed during quiz and auction (Only 2 members per team can participate)',
-            'Participants are requested to bring their own individual pens to note down the players they buy.'
-        ],
-        duration: 'For quiz 30 mins, auction (Min 2 hrs.)'
+            'Number of participants: 2-4 members per team',
+            'Teams per College: 3 teams',
+            'Note: Only 2 members per team can participate in quiz & auction',
+            'Each team gets fixed virtual points (set by organizers).',
+            'Players will have base points.',
+            'Teams must bid according to auctioneer\'s instructions.',
+            'Once sold, the bid is final (no changes allowed).',
+            'Teams must properly record all purchased players.'
+        ]
     },
     {
         id: 'd2-boxcricket',
         title: 'Box Cricket',
         category: 'Sports',
         day: 'Day 2',
-        description: ['Knockout', '3 Overs', 'Team of 4'],
+        description: [
+            'Matches will be conducted on knockout basis. Duration: 3 to 4 overs per team. Fixtures will be decided based on the number of entries.'
+        ],
         details: 'Venue: Sports Complex',
         icon: <Activity size={24} />,
         color: 'from-orange-500 to-red-600',
         image: 'https://images.unsplash.com/photo-1531415074968-036ba1b575da?q=80&w=2070',
         rules: [
-            'Number of teams per college: 2',
-            'Number of participants per team: 4',
-            'Spot registration is mandatory.',
-            'Match will be conducted on knockout basis',
-            'Fixture will be done based on the number of entries',
-            'Hitting the ball directly out of boundary line will be considered as out',
-            'Ball must be released /rolled under the hip level of the bowler',
-            'One pitch one hand is allowed'
+            'Number of participants: 4 members per team',
+            'Teams per College: 2 teams',
+            'Hitting the ball directly out of the boundary line will be considered as out.',
+            'Ball must be released/rolled under the hip level by the bowler.',
+            'One pitch, one hand is allowed.'
         ],
-        duration: '3 overs per team'
+        duration: '3 to 4 overs per team'
     },
     {
         id: 'd2-dance',
         title: 'Dance',
         category: 'Cultural',
         day: 'Day 2',
-        description: ['Solo/Group', 'Decent Songs', 'Choreography'],
+        description: [
+            'Teams can perform any dance style (Classical, Folk, Western, Fusion, etc.) while maintaining coordination, creativity, and stage presence.'
+        ],
         details: 'Venue: Main Stage',
         icon: <Music size={24} />,
         color: 'from-indigo-500 to-purple-600',
         image: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070',
         rules: [
-            'Number of teams per college: 5',
-            'Number of participants per team: 1-8 members',
-            'Dress code: Decent dressing & modest',
-            'The team will be disqualified if the performance contains vulgar activities or vulgar music',
-            'The music/song should not contain any obscene, defamatory or other objectionable content, and no revealing costumes will be permitted.',
-            'The participants are requested to bring audio files in MP3 format (max 50 MB) in the form of a pendrive or CD.'
+            'Number of participants: Maximum 8 per team (Solo and Group allowed)',
+            'Teams per College: 2 teams',
+            'Performances must be college-appropriate.',
+            'Dress Code: Participants must wear decent, modest, and appropriate costumes. Revealing costumes are strictly prohibited.',
+            'Strictly Prohibited: Vulgar activities, explicit gestures, comments, or movements are strictly prohibited.',
+            'Warning: Teams will be disqualified if any vulgarity is found in the performance or music.',
+            'Strictly Prohibited: Songs must not contain obscene, defamatory, vulgar, or objectionable content.',
+            'Warning: Only decent songs are allowed. Any vulgar music will lead to immediate disqualification.',
+            'Audio files must be in MP3 format (max 50 MB) via pen drive.',
+            'Backup copy must be kept on a mobile phone or another pen drive.'
         ],
-        duration: '4 - 5 mins per team'
+        duration: '4-5 minutes (strictly time-bound)'
     },
     {
         id: 'd2-fashionshow',
         title: 'Fashion Show',
         category: 'Cultural',
         day: 'Day 2',
-        description: ['Ramp Walk', 'Theme', 'Style'],
+        description: [
+            'Theme: All costumes and performances must strictly follow the "Fairy Tale" theme.',
+            'Performance Time: Each team gets 5-8 minutes, including setup and exit. A warning bell will ring 1 minute before time ends.'
+        ],
         details: 'Venue: Main Stage',
         icon: <Shirt size={24} />,
         color: 'from-pink-500 to-violet-600',
         image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=2070',
         rules: [
-            'Team participation.',
-            'Theme should be followed.',
-            'Modest attire required.'
+            'Number of participants: 5-10 members per team',
+            'Teams per College: 2 teams',
+            'Time limit must be strictly followed; exceeding time may lead to point deduction.',
+            'Music: Background music must be submitted in MP3 format prior to the event.',
+            'Conduct: Vulgarity or inappropriate gestures are strictly prohibited.',
+            'Costumes and Accessories: Teams must bring their own costumes and accessories.',
+            'Warning: Any inappropriate content will lead to disqualification.'
         ]
     },
     {
@@ -532,18 +586,23 @@ export const events: Event[] = [
         title: 'Free Fire',
         category: 'Gaming',
         day: 'Day 2',
-        description: ['BR-Mode', 'Clash Squad', 'Squad'],
+        description: [
+            'Specific team rules will be announced before the match.',
+            'Game Modes: Matches will be played in Battle Royale (BR) mode and Clash Squad mode.',
+            'Rounds: There will be 2 rounds of Battle Royale.',
+            'Fair Play: Fair play is mandatory. Unsportsmanlike behaviour may lead to disqualification.'
+        ],
         details: 'Venue: E-Sports Arena',
         icon: <Gamepad2 size={24} />,
         color: 'from-orange-500 to-red-500',
         image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2070',
         rules: [
-            'Number of teams per college: 4',
-            'Number of participants per team: 4',
-            'The match will be BR-Mode and Clash Squad.',
-            'There will be 2 rounds of Battle Royale.',
-            'Round-1 includes BR-Mode and Round-2 will be Clash Squad.',
-            'Participants and their teams will be disqualified if they use foul words and vulgar actions'
+            'Number of participants: 4 members per team',
+            'Teams per College: 2-3 teams (depending on slots)',
+            'Participants must follow all game rules and organizer instructions.',
+            'Strictly Prohibited: Cheating or exploiting glitches is strictly prohibited.',
+            'Final Decision: Decisions by the game organizers/judges are final.',
+            'Teams must report any technical issues immediately to organizers.'
         ]
     },
     {
@@ -551,51 +610,67 @@ export const events: Event[] = [
         title: 'Instrumentals',
         category: 'Cultural',
         day: 'Day 2',
-        description: ['Solo/Group', 'Music', 'Talent'],
+        description: [
+            'Instrumentals is a platform for musicians to perform a melody using any musical instrument without vocals. Participants are expected to mix tunes and showcase musical skills.'
+        ],
         details: 'Venue: Auditorium',
         icon: <Music size={24} />,
         color: 'from-teal-500 to-emerald-500',
         image: 'https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=2070',
         rules: [
-            'Bring your own instruments.',
-            'Time limit: 4 mins.',
-            'No backing tracks allowed.'
-        ]
+            'Number of participants: Solo or group (Max 6)',
+            'Teams per College: 2 teams',
+            'Restriction: Use of pre-recorded tracks or backing music is not allowed unless approved by organizers.',
+            'Instruments: Participants must bring their own instruments.'
+        ],
+        duration: 'Time Limit: 3-5 minutes on stage'
     },
     {
         id: 'd2-mime',
         title: 'Mime',
         category: 'Arts',
         day: 'Day 2',
-        description: ['Silent Act', 'Theme Choice', 'Group'],
+        description: [
+            'MIME is a silent performance event where participants convey a story, message, or social theme through facial expressions, body language, and gestures without using any spoken words or sounds.'
+        ],
         details: 'Venue: Auditorium',
         icon: <Smile size={24} />,
         color: 'from-gray-500 to-slate-600',
         image: 'https://images.unsplash.com/photo-1460661631160-a562523081ad?q=80&w=2070',
         rules: [
-            'Number of teams per college: 2',
-            'Number of participants per team: 7',
-            'Theme: Participant’s choice',
-            'Music should be submitted in a CD’s or Pen drive format at least an hour before the performance.',
-            'Participants should bring their required materials and accessories.',
-            'Participants should represent themselves in a proper dress code'
+            'Number of participants: 5-7 members per team',
+            'Teams per College: 2 teams',
+            'Time limit must be strictly followed; exceeding time may lead to point deduction.',
+            'Performances must be safe and suitable for all audiences.',
+            'Warning: Any inappropriate content may lead to disqualification.',
+            'Music: Submitted in CD or Pen Drive at least 1 hour before performance.',
+            'Materials: Participants must bring their own materials and accessories.',
+            'Dress Code: Proper dress code suitable for performance.'
         ],
-        duration: '5 minutes'
+        duration: '5 minutes per performance'
     },
     {
         id: 'd2-roborace',
         title: 'Robo Race',
         category: 'Technical',
         day: 'Day 2',
-        description: ['Robotics', 'Speed', 'Obstacles'],
+        description: [
+            'Robo Race is a technical competition where teams design and operate a manually controlled robot to navigate through a predefined track consisting of obstacles, turns, and challenges within the minimum time. The team completing the track in the shortest time without violations will be declared the winner.'
+        ],
         details: 'Venue: Open Ground',
         icon: <Bot size={24} />,
         color: 'from-blue-500 to-cyan-500',
         image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070',
         rules: [
-            'Robot must cover the track in minimum time.',
-            'Obstacles included.',
-            'Max dimensions apply.'
+            'Number of participants: Individual participants',
+            'Teams per College: 2 teams per college',
+            'The event will be conducted in multiple rounds (Prelims/Finals, if required).',
+            'Robots must be manually controlled (wired/wireless).',
+            'The robot must fit within the specified dimensions (as announced by organizers).',
+            'Only one operator is allowed to control the robot during the race.',
+            'Warning: Touching the robot during the run will result in penalty or disqualification.',
+            'Strictly Prohibited: Damaging the track or other robots will lead to immediate disqualification.',
+            'Teams must bring their own robot and required accessories (battery, controller, tools, etc.).'
         ]
     },
     {
@@ -603,36 +678,41 @@ export const events: Event[] = [
         title: 'Squid Game',
         category: 'Fun',
         day: 'Day 2',
-        description: ['Red Light Green Light', 'Tug of War', 'Marbles', 'Glass Bridge'],
+        description: [
+            'Squid Game is a fun team-based challenge event. Teams compete in multiple mini-rounds that test agility, teamwork, strategy, and presence of mind. Each round eliminates teams based on performance until a winner is declared.'
+        ],
         details: 'Venue: Open Ground',
         icon: <Skull size={24} />,
         color: 'from-teal-600 to-pink-600',
         image: 'https://images.unsplash.com/photo-1635334200424-696232236d39?q=80&w=2070',
         rules: [
-            'Number of teams per college: 2',
-            'Number of participants per team: 10',
-            'Round 1: Red light, green light (Moving when doll faces away).',
-            'Round 2: Tug of war (Team vs Team).',
-            'Round 3: Marbles (Even-Odd Guessing).',
-            'Round 4: Glass bridge (Survivors only).'
-        ],
-        duration: '25 mins'
+            'Number of participants: 10 members per team',
+            'Teams per College: Max of 2 teams',
+            'Each round will have different tasks/challenges.',
+            'Teams must follow the instructions given before each round.',
+            'Warning: Any unfair practice or misconduct will lead to disqualification.',
+            'Safety: Basic safety rules must be strictly followed during physical activities.',
+            'Note: The organizing committee holds the right to modify rounds if necessary.'
+        ]
     },
     {
         id: 'd2-animequiz',
         title: 'Anime Quiz',
         category: 'Quiz',
         day: 'Day 2',
-        description: ['Anime Genres', 'Team of 3', 'Points Based'],
+        description: [
+            'The quiz will be conducted in multiple rounds. Questions will cover a wide range of anime genres. The team scoring the highest points will qualify for Round 2.'
+        ],
         details: 'Venue: Room 2',
         icon: <HelpCircle size={24} />,
         color: 'from-pink-500 to-rose-500',
         image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=2070',
         rules: [
-            'Number of participants per team: 3',
-            'Number of teams per college: 4-5',
-            'The team with more points will move forward to the next level',
-            'Questions will be asked from nearly all genres of anime.'
+            'Number of participants: 2-3 members per team',
+            'Teams per College: Maximum 5 teams',
+            'Teams must answer within the given time limit.',
+            'Warning: Cheating or use of unfair means will lead to immediate disqualification.',
+            'Strictly Prohibited: Use of mobile phones or external help is strictly prohibited.'
         ]
     },
     {
@@ -640,152 +720,226 @@ export const events: Event[] = [
         title: 'Channel Surfing',
         category: 'Fun',
         day: 'Day 2',
-        description: ['Improv', 'TV Channels', 'Comedy'],
+        description: [
+            'Participants must act as if the audience is changing TV channels. Every few seconds the judge says a channel -> the team must instantly switch and perform that genre. Teams perform multiple short skits representing different TV channels (news, serial, sports, ads, cartoon etc.)'
+        ],
         details: 'Venue: Stage',
         icon: <Radio size={24} />,
         color: 'from-blue-400 to-teal-400',
         image: 'https://images.unsplash.com/photo-1598550476439-6847785fcea6?q=80&w=2070',
         rules: [
-            'Number of participants per team: 4-6',
-            'Number of teams per College:3',
-            'The topic will be given on the spot',
-            'Preparation Time: 2 Mins (For Finals Also)',
-            'Act Time: 5 Mins (For Finals 5 Mins)',
-            'Use Of Properties from Surroundings Are Allowed',
-            'Participants should bring their own materials Like Charts and Stationery',
-            'Judgement Based on Creativity, Speaking Skill, Humor and Applications of the Channel'
-        ]
+            'Number of participants: 4-6 members per team',
+            'Teams per College: 3 Teams',
+            'Acts must be clean and college-appropriate.',
+            'Strictly Prohibited: Use of vulgar or inappropriate content is strictly prohibited.',
+            'Allowed: Use of props from surroundings is allowed.',
+            'Teams may bring their own materials such as charts and stationery items.'
+        ],
+        duration: 'Act time 5 minutes (Same for Finals)'
     },
     {
-        id: 'd2-englishlit',
-        title: 'English literary',
+        id: 'd2-englishdebate',
+        title: 'English Debate',
         category: 'Arts',
         day: 'Day 2',
-        description: ['Debate', 'Writing', 'Speaking'],
+        description: [
+            'This is a debate event where each team comprises two members. One member will speak in favor of the given topic, while the other member will speak against it. The topic will be announced on the spot.'
+        ],
         details: 'Venue: Hall 2',
         icon: <Book size={24} />,
         color: 'from-indigo-400 to-blue-400',
         image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2070',
         rules: [
-            'Individual participation.',
-            'Topics given on spot.',
-            'Judged on fluency and vocabulary.'
-        ]
+            'Number of participants: 2 participants per team',
+            'Per College: Maximum 6 teams',
+            'Each speaker will be given 5 minutes to present their arguments.',
+            'The motion mover will get 1 minute of extra time for winding up.',
+            'The topic will be announced on the spot.',
+            'Participants must adhere strictly to the allotted time.'
+        ],
+        duration: '15 minutes per team'
+    },
+    {
+        id: 'd2-essaywriting',
+        title: 'Essay Writing',
+        category: 'Arts',
+        day: 'Day 2',
+        description: [
+            'This is an individual writing competition where participants compose a piece based on the topic announced on the spot. The event evaluates creativity, clarity of thought, language proficiency, and originality within the prescribed word limit.'
+        ],
+        details: 'Venue: Hall 2',
+        icon: <PenTool size={24} />,
+        color: 'from-indigo-400 to-blue-400',
+        image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2070',
+        rules: [
+            'Number of participants: 1 participant (Individual)',
+            'Per College: Maximum 5 participants',
+            'The topic will be given on the spot.',
+            'Word Limit: 200-400 words',
+            'Strictly Prohibited: Use of electronic devices during the competition is strictly prohibited.',
+            'Participants must bring their own stationery items.',
+            'Note: Entries exceeding the word limit may be penalized.'
+        ],
+        duration: '45 minutes'
+    },
+    {
+        id: 'd2-englishpoetry',
+        title: 'English Poetry',
+        category: 'Arts',
+        day: 'Day 2',
+        description: [
+            'This is an individual competition where participants create content based on the theme announced on the spot within the given time limit. The event evaluates creativity, originality, and clarity of expression.'
+        ],
+        details: 'Venue: Hall 2',
+        icon: <Book size={24} />,
+        color: 'from-indigo-400 to-blue-400',
+        image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=2070',
+        rules: [
+            'Number of participants: 1 participant (Individual)',
+            'Per College: Maximum 5 participants',
+            'The theme will be announced on the spot.',
+            'Participants must bring their own stationery items.',
+            'Strictly Prohibited: Use of electronic devices during the competition is strictly prohibited.',
+            'Warning: Any form of plagiarism will lead to immediate disqualification.'
+        ],
+        duration: '30 minutes'
     },
     {
         id: 'd2-familyfeud',
         title: 'Family Feud',
         category: 'Fun',
         day: 'Day 2',
-        description: ['Team Game', 'Buzzer', 'Survey Points'],
+        description: [
+            'The Family Feud event starts with two teams introducing themselves and a quick buzzer test. For each survey question, one member from both teams competes to gain control; the winning team chooses to play or pass and guesses popular answers to score points. After three wrong attempts the other team gets a steal chance, and after several rounds the team with the highest total score wins.'
+        ],
         details: 'Venue: Auditorium',
         icon: <Users size={24} />,
         color: 'from-green-500 to-teal-500',
         image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070',
         rules: [
-            'Number of team per college: 2',
-            'Number of participants: 4',
-            'One member of each team faces the other in a face-off as the teacher reads the question off the game board.',
-            'The team that buzzed in with the correct answer receives control of the board and has the option of playing or passing control to the other team.',
-            'The team that has control tries to reveal all the correct answers to the question before receiving three strikes.',
-            'The team that receives three strikes without clearing the board, control is passed to the other team.'
-        ],
-        duration: '30 minutes'
+            'Number of participants: 4 members per team',
+            'Teams per College: 2 teams',
+            'Only the player at the front can give answers during face-off.',
+            'Three strikes ends the turn and gives the other team a chance to steal points.',
+            'Answers not on the board count as Try Again (no points).',
+            'Teams must keep track of points accurately using the Score button.'
+        ]
     },
     {
         id: 'd2-guesslyrics',
         title: 'Guess the Lyrics',
         category: 'Fun',
         day: 'Day 2',
-        description: ['Missing Lyrics', '3 Rounds', 'Songs'],
+        description: [
+            'Number of Rounds: 3 rounds',
+            'Objective: Participants must guess the missing lyrics in all rounds.',
+            'Slides/Songs: Each round will have 10 slides, i.e., 10 songs displayed.'
+        ],
         details: 'Venue: Room 3',
         icon: <Music size={24} />,
         color: 'from-cyan-400 to-blue-500',
         image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070',
         rules: [
-            'Number of teams per college: 2',
-            'Number of participants per team: 2',
-            'Number of rounds: 3',
-            'Participants must guess the missing lyrics in all the rounds',
-            'Each correct answer carries 2 points',
-            'Pass question correct answer carries 1 point',
-            'Each round will have 10 slides i.e.......10 songs will be displayed'
+            'Number of participants: 2 members per team',
+            'Teams per College: 3 teams',
+            'Teams must answer only when prompted.',
+            'Scoring: Correct answer - 2 points, Pass question - 1 point.',
+            'Winning: Based on total points scored across all rounds.',
+            'Final: Points are final as per organizer\'s scoring.',
+            'Participants must follow event decorum; no external help allowed.'
         ]
     },
     {
         id: 'd2-mehandi',
-        title: 'Mehandi',
+        title: 'Mehndi',
         category: 'Arts',
         day: 'Day 2',
-        description: ['Henna', 'Design', 'Creative'],
+        description: [
+            'Design Requirements: Freehand mehndi design on one full hand or half hand. Theme announced on the spot.',
+            'Designs include basic patterns, theme-based elements, creative detailing.'
+        ],
         details: 'Venue: Corridor',
         icon: <Palette size={24} />,
         color: 'from-orange-400 to-red-400',
         image: 'https://images.unsplash.com/photo-1626084880227-8051608677c7?q=80&w=2070',
         rules: [
-            'Bring your own cones.',
-            'Design within time limit.',
-            'Neatness and creativity.'
-        ]
+            'Number of participants: Individual participants',
+            'Per College: 3 participants',
+            'Strictly Prohibited: Use of reference images, mobile phones, stencils, stamps, or pre-drawn designs is prohibited.',
+            'Designs must be original and completed within the time limit.',
+            'Materials: Only mehndi cones are allowed.',
+            'Participants must maintain event decorum.'
+        ],
+        duration: '45-60 minutes'
     },
     {
         id: 'd2-pitchpaper',
-        title: 'Pitch Ur Paper',
+        title: 'Pitch Ur Paper (Paper Presentation)',
         category: 'Technical',
         day: 'Day 2',
-        description: ['Abstract < 250 words', 'Max 4 Team', '10 Mins Present'],
+        description: [
+            'Paper Presentation is a technical event where participants present their research ideas, innovative concepts, or technical topics using visual aids (PPT). The presentation should demonstrate clarity, originality, technical knowledge, and effective communication skills.'
+        ],
         details: 'Venue: CSE Lab',
         icon: <FileText size={24} />,
         color: 'from-indigo-400 to-cyan-400',
         image: 'https://images.unsplash.com/photo-1544531835-3a99008aaaae?q=80&w=2070',
         rules: [
-            'Number of participants per team: Maximum Four',
-            'The topic of the papers can be chosen on your own. The presentation should focus on one topic. The report should be well comprehended and advanced, which could appeal to an undergraduate. Kindly contact the coordinator for any clarifications.',
+            'Number of participants: Maximum 4 per team',
+            'Teams per College: Max of 3 teams',
+            'The topic of the papers can be chosen on your own. The presentation should focus on one topic.',
             'The abstract should not exceed more than 250 words, and the Paper should not exceed 15 pages.',
             'Kindly bring your PowerPoint presentation on a CD or in a pen-drive.',
-            'Soft copies should submitted in pdf format.',
-            'Kindly mail your abstract, paper and ppt to enthral@alphagroup.edu. Difficulties will be addressed through the same email ID.',
-            'The mail with submissions should contain: Title- theme of the paper, Names of the authors, Phone no of the authors, E-mail Ids.',
+            'Soft copies should be submitted in PDF format.',
+            'Email: Kindly mail your abstract, paper and ppt to enthral@alphagroup.edu',
             'The teams will get 10 minutes for presentation followed by a Q&A session.',
-            'Participants from different institutions can be a part of the same team. However, one participant may not be a part of multiple teams for the same event.'
-        ],
-        prizes: ['First Prize', 'Second Prize']
+            'Participants from different institutions can be part of the same team. However, one participant may not be a part of multiple teams for the same event.'
+        ]
     },
     {
         id: 'd2-sharktank', // Was Business Thoughts
-        title: 'Shark Tank',
+        title: 'Shark Tank (Idea Pitching)',
         category: 'Technical',
         day: 'Day 2',
-        description: ['Idea Pitching', 'Problem Solving', 'Marketing'],
+        description: [
+            'Idea Pitching is a competitive event where participants present innovative ideas or creative solutions to real-world problems within a limited time. Teams must clearly explain the problem statement, proposed solution, uniqueness, feasibility, and potential impact of their idea.'
+        ],
         details: 'Venue: Auditorium',
         icon: <Trophy size={24} />,
         color: 'from-blue-600 to-cyan-600',
         image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2070',
         rules: [
-            'Number of participants per team: 6',
-            'Charts and sketches will be provided',
-            'Problem statement will be given on the spot, and present the solution with the given belongings',
-            'The problem will be based on customer insights,marketing challenges,revenue generation etc..'
+            'Number of participants: Min 1, Max 3 per team',
+            'Per College: Maximum 2 teams',
+            'The competition will be conducted in a single round.',
+            'Ideas are presented on Lecture based.',
+            'Strictly Prohibited: Internet usage is strictly prohibited.',
+            'Participants must be prepared to answer judges\' questions.',
+            'Strictly Prohibited: Plagiarism is strictly prohibited.'
         ],
-        duration: '2hrs',
-        prizes: ['First Prize', 'Second Prize']
+        duration: 'Time Limit: 3-5 min pitch + 2-3 min Q&A'
     },
 
     // ONLINE EVENTS
     {
         id: 'online-chathuranga',
-        title: 'Chathuranga',
+        title: 'Chathuranga (Chess)',
         category: 'Gaming',
         day: 'Online',
-        description: ['Chess', 'Strategy', 'Competition'],
+        description: [
+            'The event will be conducted online on the specified platform. Participants must join on time and ensure a stable internet connection.'
+        ],
         details: 'Online',
         icon: <Swords size={24} />,
         color: 'from-slate-400 to-gray-500',
         image: 'https://images.unsplash.com/photo-1529699211952-734e80c4d42b?q=80&w=2070',
         rules: [
-            'Online Chess Tournament.',
-            'Standard rules apply.',
-            'Fair play monitoring.'
+            'Number of participants: Min 1, Max 3 per team',
+            'Per College: Maximum 2 teams',
+            'Standard chess rules will be followed.',
+            'Matches may be timed as per the platform or organizer\'s instructions.',
+            'Strictly Prohibited: Use of chess engines, bots, or any external help is strictly prohibited.',
+            'Fair Play: Participants must play honestly and fairly.'
         ]
     },
     {
@@ -793,19 +947,25 @@ export const events: Event[] = [
         title: 'Reels Contest',
         category: 'Fun',
         day: 'Online',
-        description: ['30 Sec Video', 'Hackathon Experience', 'Creative'],
+        description: [
+            'Unleash your creativity and capture the vibe of ENTHRAL',
+            'Create engaging and entertaining reels that showcase the spirit, fun, and energy of the event.',
+            'Participants get time to record and edit their reels.'
+        ],
         details: 'Online Submission',
         icon: <Video size={24} />,
         color: 'from-purple-500 to-pink-500',
         image: 'https://images.unsplash.com/photo-1611162616475-46b635cb6868?q=80&w=2070',
         rules: [
-            'Number of Teams per college: 2 teams (maximum).',
-            'Team Composition: Each team shall comprise 1–2 members.',
-            'Theme: Reels should be based on the hackathon experience—coding moments, funny incidents, challenges faced during the event, or any hackathon-related theme.',
-            'Time Limit: Each reel must be a maximum of 30 seconds.',
-            'Medium: Reels should be submitted in video format (.mp4, .mov).',
-            'Technical Requirements: The reels should be well-lit, with clear audio and video quality.'
+            'Number of participants: Min 1, Max 2 per team',
+            'Per College: Maximum 2 teams',
+            'Each team shall comprise 1-2 members.',
+            'Reels must strictly follow the given theme.',
+            'Format: Videos should be submitted in .mp4 or .mov format.',
+            'The reel must have clear audio and good video quality with proper lighting.',
+            'Warning: Any inappropriate or irrelevant content will lead to disqualification.'
         ],
+        duration: 'Editing Time : 60 mins.',
         prizes: ['First Prize', 'Second Prize']
     }
 ];

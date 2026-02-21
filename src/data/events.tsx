@@ -22,6 +22,7 @@ export interface Event {
     teamSize?: string;
     duration?: string;
     contact?: string;
+    note?: string;
 }
 
 export const events: Event[] = [
@@ -371,7 +372,7 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070',
         rules: [
             'Number of participants: Solo or Group (max 5)',
-            'Number of teams per college: Maximum 2 teams',
+            'Per College: Maximum 2 teams',
             'Participants must bring their own instruments or karaoke track if required.',
             'Content Restriction: Songs must not contain vulgar lyrics or content that may offend any religion or community.',
             'Performances must maintain dignity and decorum.',
@@ -487,8 +488,8 @@ export const events: Event[] = [
         category: 'Fun',
         day: 'Day 2',
         description: [
-            'Round 1 - APL Quiz: Duration: 30 minutes. Quiz based on IPL and cricket knowledge. Top 10 teams qualify for Round 2.',
-            'Round 2 - APL Auction: Duration: Minimum 2 hours. Teams bid for players to build their squad.'
+            'Round 1 - APL Quiz\nDuration: 30 minutes. Quiz based on IPL and cricket knowledge. Top 10 teams qualify for Round 2.',
+            'Round 2 - APL Auction\nDuration: Minimum 2 hours. Teams bid for players to build their squad.'
         ],
         details: 'Venue: Seminar Hall',
         icon: <Gavel size={24} />,
@@ -497,13 +498,13 @@ export const events: Event[] = [
         rules: [
             'Number of participants: 2-4 members per team',
             'Teams per College: 3 teams',
-            'Note: Only 2 members per team can participate in quiz & auction',
             'Each team gets fixed virtual points (set by organizers).',
             'Players will have base points.',
             'Teams must bid according to auctioneer\'s instructions.',
             'Once sold, the bid is final (no changes allowed).',
             'Teams must properly record all purchased players.'
-        ]
+        ],
+        note: 'Note: Only 2 members per team can participate in quiz & auction'
     },
     {
         id: 'd2-boxcricket',
@@ -523,8 +524,7 @@ export const events: Event[] = [
             'Hitting the ball directly out of the boundary line will be considered as out.',
             'Ball must be released/rolled under the hip level by the bowler.',
             'One pitch, one hand is allowed.'
-        ],
-        duration: '3 to 4 overs per team'
+        ]
     },
     {
         id: 'd2-dance',

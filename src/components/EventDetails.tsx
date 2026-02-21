@@ -86,10 +86,24 @@ const EventDetails = () => {
                                 <div>
                                     <p className="text-gray-500 text-xs uppercase tracking-wider mb-2">Per College</p>
                                     <p className="text-white font-bold text-lg leading-tight">
-                                        {perCollegeRule.replace(/Number of (teams|participants) per college[:\s]*/i, '').replace(/Per College[:\s]*/i, '')}
+                                        {perCollegeRule.replace(/Number of (teams|participants) per college[:\s]*/i, '').replace(/(Per College|Teams per College)[:\s]*/i, '')}
                                     </p>
                                 </div>
                             </div>
+
+                            {event.note && (
+                                <div className="mt-6 p-4 rounded-xl relative overflow-hidden group border border-amber-500/20 bg-amber-500/5">
+                                    <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                                    <div className="flex items-start gap-3 relative z-10">
+                                        <div className="text-amber-500 shrink-0 mt-0.5">
+                                            <Info size={16} />
+                                        </div>
+                                        <p className="text-amber-200/90 text-sm font-medium leading-relaxed">
+                                            {event.note}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* Event Format Card */}
@@ -102,9 +116,11 @@ const EventDetails = () => {
                                 <h3 className="text-lg font-bold text-amber-400">Event Format</h3>
                             </div>
                             <div className="space-y-4 relative z-10">
-                                <p className="text-gray-300 text-sm leading-relaxed">
-                                    {event.description.join('. ')}.
-                                </p>
+                                {event.description.map((desc, i) => (
+                                    <p key={i} className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
+                                        {desc}
+                                    </p>
+                                ))}
                                 {event.duration && (
                                     <p className="text-amber-200/80 text-sm font-medium">
                                         <span className="text-amber-500 font-bold">Duration:</span> {event.duration}

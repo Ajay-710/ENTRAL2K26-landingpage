@@ -539,7 +539,7 @@ export const events: Event[] = [
         color: 'from-indigo-500 to-purple-600',
         image: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070',
         rules: [
-            'Number of participants: Maximum 8 per team (Solo and Group allowed)',
+            'Number of participants: Maximum 8 per team',
             'Teams per College: 2 teams',
             'Performances must be college-appropriate.',
             'Dress Code: Participants must wear decent, modest, and appropriate costumes. Revealing costumes are strictly prohibited.',
@@ -550,6 +550,7 @@ export const events: Event[] = [
             'Audio files must be in MP3 format (max 50 MB) via pen drive.',
             'Backup copy must be kept on a mobile phone or another pen drive.'
         ],
+        note: '(Solo and Group allowed)',
         duration: '4-5 minutes (strictly time-bound)'
     },
     {

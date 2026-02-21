@@ -92,16 +92,10 @@ const EventDetails = () => {
                             </div>
 
                             {event.note && (
-                                <div className="mt-6 p-4 rounded-xl relative overflow-hidden group border border-amber-500/20 bg-amber-500/5">
-                                    <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-                                    <div className="flex items-start gap-3 relative z-10">
-                                        <div className="text-amber-500 shrink-0 mt-0.5">
-                                            <Info size={16} />
-                                        </div>
-                                        <p className="text-amber-200/90 text-sm font-medium leading-relaxed">
-                                            {event.note}
-                                        </p>
-                                    </div>
+                                <div className="mt-4">
+                                    <p className="text-gray-400 text-sm leading-relaxed">
+                                        {event.note}
+                                    </p>
                                 </div>
                             )}
                         </div>
@@ -123,7 +117,10 @@ const EventDetails = () => {
                                 ))}
                                 {event.duration && (
                                     <p className="text-amber-200/80 text-sm font-medium">
-                                        <span className="text-amber-500 font-bold">Duration:</span> {event.duration}
+                                        <span className="text-amber-500 font-bold">
+                                            {event.duration.toLowerCase().startsWith('act time') ? 'Act Time: ' : event.duration.toLowerCase().startsWith('time limit') ? 'Time Limit: ' : 'Duration: '}
+                                        </span>
+                                        {event.duration.replace(/^Act time\s*/i, '').replace(/^Time Limit\s*/i, '').replace(/^Time limit\s*/i, '').replace(/^duration:?\s*/i, '')}
                                     </p>
                                 )}
 

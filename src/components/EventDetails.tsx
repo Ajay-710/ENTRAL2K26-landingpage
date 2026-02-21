@@ -159,7 +159,7 @@ const EventDetails = () => {
                                 onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')}
                                 className="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-lg rounded-2xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all transform hover:-translate-y-1 active:scale-95 uppercase tracking-wider flex items-center justify-center gap-2"
                             >
-                                Register for {event.title}
+                                REGISTER NOW
                                 <ArrowLeft className="rotate-180" size={20} />
                             </button>
                         </div>

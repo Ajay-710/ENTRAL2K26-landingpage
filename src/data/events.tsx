@@ -57,16 +57,16 @@ export const events: Event[] = [
         day: 'Day 1',
         description: [
             'Brain Hack is an individual logic competition consisting of multiple rounds.',
-            'Round 1: MCQ logical reasoning questions (20–30 min). Top scorers advance to Round 2.',
-            'Round 2: Complex riddles, number puzzles, pattern-based challenges.',
+            'Round 1: MCQ logical reasoning questions (20-30 min). Top scorers advance to Round 2.',
+            'Round 2: Complex riddles, number puzzles, pattern-based challenges.'
         ],
         details: 'Venue: Seminar Hall',
         icon: <BrainCircuit size={24} />,
         color: 'from-orange-500 to-red-500',
         image: 'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?q=80&w=2070',
         rules: [
-            'Number of participants per college: Maximum 4 members',
             'Number of participants: 1 participant (Individual)',
+            'Per College: Maximum 4 members',
             'The event is strictly time-bound.',
             'In case of a tie, a tie-breaker round or question will be conducted.',
             'Strictly Prohibited: Use of mobile phones, internet, calculators, or any external help is not allowed.',
@@ -90,12 +90,11 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070',
         rules: [
             'Number of participants: 1 participant (Individual)',
-            'Number of participants per college: Maximum 4 participants',
+            'Per College: Maximum 4 participants',
             'Strictly Prohibited: No internet access is allowed.',
             'Strictly Prohibited: Use of mobile phones, external storage devices, or any external help is strictly prohibited.',
             'Warning: Any malpractice will lead to immediate disqualification.'
-        ],
-        prizes: ['First Prize', 'Second Prize']
+        ]
     },
     {
         id: 'd1-hackathon',
@@ -129,7 +128,8 @@ export const events: Event[] = [
         category: 'Technical',
         day: 'Day 1',
         description: [
-            'Pixel Craft is a digital poster design competition where participants create posters using Canva based on a theme given on the spot.'
+            'Pixel Craft is a digital poster design competition where participants create posters using Canva based on a theme given on the spot.',
+            'Platform: Canva (mobile usage is allowed)'
         ],
         details: 'Venue: Design Lab',
         icon: <Image size={24} />,
@@ -137,17 +137,15 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1626785774573-4b799314346d?q=80&w=2070',
         rules: [
             'Number of participants: 1 participant (Individual)',
-            'Number of participants per college: Maximum 4 members',
-            'Platform: Canva (mobile usage is allowed)',
+            'Per College: Maximum 4 members',
             'Theme will be given on the spot.',
+            'Time limit: 60 minutes (strictly time-bound)',
             'The poster must be designed during the event time only.',
             'Strictly Prohibited: No pre-designed templates are allowed.',
             'Strictly Prohibited: Plagiarism or copying from internet sources is strictly prohibited.',
             'Posters must be original and creative.',
             'Warning: Any violation of rules may lead to immediate disqualification.'
-        ],
-        duration: '60 minutes (strictly time-bound)',
-        prizes: ['First Prize', 'Second Prize']
+        ]
     },
     {
         id: 'd1-prompting',
@@ -163,7 +161,8 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2070',
         rules: [
             'Number of participants: Individual or Team (Max 3)',
-            'Number of teams per college: Maximum 2 teams',
+            'Per College: Maximum 2 teams',
+            'Time limit: 2-3 hours (strictly time-bound)',
             'The competition will be conducted in a single round.',
             'Topic/theme will be announced on the spot.',
             'Participants must bring their own laptop.',
@@ -172,8 +171,7 @@ export const events: Event[] = [
             'Strictly Prohibited: Plagiarism is strictly prohibited.',
             'Warning: Any copied code/design will lead to immediate disqualification.',
             'Participants must maintain discipline and follow coordinators\' instructions.'
-        ],
-        duration: '2-3 hours (strictly time-bound)'
+        ]
     },
     {
         id: 'd1-bioconnect',
@@ -181,20 +179,18 @@ export const events: Event[] = [
         category: 'Technical',
         day: 'Day 1',
         description: [
-            'Bio-Connect is a bio-medical themed event where teams will be shown images related to the bio-medical domain.',
-            'Participants must analyze the images, identify the concept, and provide the correct answer or solution.',
-            'The competition will be conducted in multiple rounds depending on the number of participating teams.'
+            'Bio-Connect is a bio-medical themed event where teams will be shown images related to the bio-medical domain. Participants must analyze the images, identify the concept, and provide the correct answer or solution. The competition will be conducted in multiple rounds depending on the number of participating teams.'
         ],
         details: 'Venue: Hall 1',
         icon: <Activity size={24} />,
         color: 'from-green-500 to-teal-500',
         image: 'https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070',
         rules: [
-            'Number of participants per team: 2-3 participants per team',
-            'Number of teams per college: Maximum 2 teams',
-            'Each team will be given 30–60 seconds per question (as decided by the organizers).',
-            'Team discussion is allowed only within the allotted time.',
-            'Strictly Prohibited: Use of mobile phones or any external help is strictly prohibited.'
+            'Number of participants: 2-3 participants per team',
+            'Per College: Maximum 2 teams',
+            'Each team will be given 30-60 seconds per question (as decided by the organizers).',
+            'Strictly Prohibited: Use of mobile phones or any external help is strictly prohibited.',
+            'Team discussion is allowed only within the allotted time.'
         ]
     },
     {
@@ -214,7 +210,7 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2070',
         rules: [
             'Number of participants: 1 participant (Individual)',
-            'Number of participants per college: Maximum 4 members',
+            'Per College: Maximum 4 members',
             'Strictly Prohibited: Use of internet, mobile phones, or any external help is strictly prohibited.',
             'Warning: Any form of malpractice will lead to immediate disqualification.'
         ]
@@ -233,7 +229,7 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1555664424-778a69032334?q=80&w=2070',
         rules: [
             'Number of participants: 2-4 participants per team',
-            'Number of teams per college: 1-3 teams',
+            'Per College: 1-3 teams',
             'Teams must follow the clue sequence strictly.',
             'Strictly Prohibited: Any form of cheating or external help will lead to disqualification.',
             'Strictly Prohibited: Use of mobile phones or internet is strictly prohibited (if applicable).',
@@ -325,14 +321,14 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=2070',
         rules: [
             'Number of participants: 1 participant (Individual)',
-            'Number of participants per college: 3-4 participants',
+            'Per College: 3-4 participants',
             'Topic will be given on the spot.',
             'Participants must bring their own drawing and stationery materials.',
             'A3/chart paper will be provided by the organizers.',
             'Artwork must be original and created only during the event time.',
-            'No tracing is allowed.',
-            'No printed materials or reference copies are permitted.',
-            'Mobile phones are strictly prohibited.',
+            'Strictly Prohibited: No tracing is allowed.',
+            'Strictly Prohibited: No printed materials or reference copies are permitted.',
+            'Strictly Prohibited: Mobile phones are strictly prohibited.',
             'Sharing of materials between participants is not allowed.',
             'Only one artwork must be submitted per participant.',
             'Warning: Any offensive or inappropriate content will lead to disqualification.'
@@ -391,23 +387,21 @@ export const events: Event[] = [
         category: 'Cultural',
         day: 'Day 1',
         description: [
-            'Corporate Walk is a themed ramp walk event where teams present corporate formal attire with confidence, poise, and unique style.',
-            'The performance should reflect the elegance and professionalism of corporate culture.',
-            'Theme: Corporate Formal Attire (Western Wear & Formal)'
+            'Corporate Walk is a themed ramp walk event where teams present corporate formal attire with confidence, poise, and unique style. The performance should reflect the elegance and professionalism of corporate culture.'
         ],
-        details: 'Venue: Stage',
+        details: 'Theme: Corporate Formal Attire (Western Wear & Formal)',
         icon: <Shirt size={24} />,
         color: 'from-slate-500 to-gray-600',
         image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070',
         rules: [
-            'No. of participants: 7-8 participants per team',
-            'Number of teams per college: Maximum 1 team',
+            'Number of participants: 7-8 participants per team',
+            'Per College: Maximum 1 team',
             'Time limit is 4-6 minutes per team.',
             'Teams are allowed to use only theme-based props.',
             'Props must be safe and should not damage the stage.',
             'Music must be submitted in MP3 format.',
             'Attire must reflect professionalism and strictly follow the theme.',
-            'Vulgarity or inappropriate gestures are strictly prohibited.',
+            'Strictly Prohibited: Vulgarity or inappropriate gestures are strictly prohibited.',
             'No stage rehearsals will be allowed before the event.',
             'Only registered participants are allowed on stage.',
             'Warning: Any misconduct or violation of rules may lead to immediate disqualification.'
@@ -427,14 +421,14 @@ export const events: Event[] = [
         image: 'https://images.unsplash.com/photo-1558244243-7f83e079737e?q=80&w=2070',
         rules: [
             'Number of participants: 2 per team (1 artist + 1 model)',
-            'Number of teams per college: 2 teams',
+            'Per College: 2 teams',
             'The competition will be conducted in one single round.',
             'Theme will be announced on the spot.',
             'Face painting must be done live on one model during the event.',
             'Strictly Prohibited: Pre-drawn designs, stencils, reference images, and mobile phones.',
             'Warning: Any inappropriate design or violation of rules may lead to disqualification.'
         ],
-        duration: '45–60 minutes (strictly time-bound)'
+        duration: '45-60 minutes (strictly time-bound)'
     },
     {
         id: 'd1-rangoli',

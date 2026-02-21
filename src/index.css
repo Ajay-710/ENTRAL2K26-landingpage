@@ -7,6 +7,7 @@
 
     body {
         @apply bg-[#050510] text-white;
+        caret-color: transparent;
     }
 }
 

@@ -34,19 +34,18 @@ export const events: Event[] = [
         category: 'Technical',
         day: 'Day 1',
         description: [
-            'Battalion is a technical debate competition open to participants from all domains.',
-            'Teams will debate on a given topic focusing on technical knowledge, logical reasoning, and communication skills.'
+            'Battalion is a technical debate competition open to participants from all domains. Teams will debate on a given topic focusing on **technical knowledge, logical reasoning, and communication skills.**'
         ],
         details: 'Venue: Seminar Hall',
         icon: <MessageSquare size={24} />,
         color: 'from-orange-500 to-amber-500',
         image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2070',
         rules: [
-            'Number of teams per college: Maximum 2 teams',
-            'Number of participants per team: 2 participants per team',
+            'Number of participants: 2 participants per team',
+            'Per College: Maximum 2 teams',
             'Topics will be announced before the event.',
-            'Preparation time of 5 minutes will be provided after topic allotment.',
-            'Each participant will get 2-3 minutes to speak. Exceeding time may lead to negative marking.',
+            'Preparation time of **5 minutes** will be provided after topic allotment.',
+            'Each participant will get **2-3 minutes** to speak. Exceeding time may lead to negative marking.',
             'Interruptions, offensive language, or misconduct are strictly prohibited.',
             'Prohibited: Use of mobile phones or internet during the event is not allowed.'
         ],
@@ -111,9 +110,9 @@ export const events: Event[] = [
         color: 'from-cyan-500 to-blue-500',
         image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070',
         rules: [
-            'Number of participants per team: Maximum 3 per team',
-            'Number of teams per college: Maximum 2 teams',
-            'Domains: AIML, IoT, Healthcare, Smart Agriculture & AgriTech, Disaster Response, EnviroTech',
+            'Number of participants: Maximum 3 per team',
+            'Per College: Maximum 2 teams',
+            '**Domains:** AIML, IoT, Healthcare, Smart Agriculture & AgriTech, Disaster Response, EnviroTech',
             'Teams must build and develop the solution only during the hackathon hours.',
             'Participants must bring their own laptops.',
             'Strictly Prohibited: Pre-built projects are strictly prohibited.',
@@ -121,7 +120,7 @@ export const events: Event[] = [
             'External help from mentors, faculty, or online communities is not permitted unless officially allowed.',
             'Internet: Internet usage is allowed unless specified otherwise by coordinators.'
         ],
-        duration: '3 hours',
+        duration: 'Maximum Duration: 3 hours',
         prizes: ['First Prize', 'Second Prize']
     },
     {

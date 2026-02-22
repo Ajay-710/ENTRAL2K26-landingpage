@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Clock, Users, Trophy, AlertCircle, Info, Music, Bot, Code2, Cpu, FileText, Gamepad2, Gavel, HelpCircle, Image, Layers, Lightbulb, MessageSquare, Mic2, Palette, PenTool, Radio, Shirt, Skull, Smile, Smartphone, Swords, Terminal, Video, Zap, Activity, BrainCircuit, Bug, MonitorPlay, MousePointer2 } from 'lucide-react';
+import { ArrowLeft, Clock, Users, Trophy, AlertCircle, Info, Music, Bot, Code2, Cpu, FileText, Gamepad2, Gavel, HelpCircle, Image, Layers, Lightbulb, MessageSquare, Mic2, Palette, PenTool, Radio, Shirt, Skull, Smile, Smartphone, Swords, Terminal, Video, Zap, Activity, BrainCircuit, Bug, MonitorPlay, MousePointer2, CheckCircle2, Wifi } from 'lucide-react';
 import { events } from '../data/events';
 
 const EventDetails = () => {
@@ -22,6 +22,20 @@ const EventDetails = () => {
             </div>
         );
     }
+
+    const renderWithHighlights = (text: string) => {
+        const parts = text.split(/(\*\*.*?\*\*)/g);
+        return parts.map((part, index) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+                return (
+                    <span key={index} className="text-amber-500 font-bold">
+                        {part.slice(2, -2)}
+                    </span>
+                );
+            }
+            return part;
+        });
+    };
 
     // Helper to extract "Per College" limit from rules
     const perCollegeRule = event.rules?.find(r => r.toLowerCase().includes('participants per college') || r.toLowerCase().includes('teams per college') || r.toLowerCase().includes('per college')) || 'See details';
@@ -112,15 +126,15 @@ const EventDetails = () => {
                             <div className="space-y-4 relative z-10">
                                 {event.description.map((desc, i) => (
                                     <p key={i} className="text-gray-300 text-sm leading-relaxed whitespace-pre-line">
-                                        {desc}
+                                        {renderWithHighlights(desc)}
                                     </p>
                                 ))}
                                 {event.duration && (
                                     <p className="text-amber-200/80 text-sm font-medium">
                                         <span className="text-amber-500 font-bold">
-                                            {event.duration.toLowerCase().startsWith('act time') ? 'Act Time: ' : event.duration.toLowerCase().startsWith('editing time') ? 'Editing Time: ' : event.duration.toLowerCase().startsWith('time limit') ? 'Time Limit: ' : 'Duration: '}
+                                            {event.duration.toLowerCase().startsWith('act time') ? 'Act Time: ' : event.duration.toLowerCase().startsWith('editing time') ? 'Editing Time: ' : event.duration.toLowerCase().startsWith('maximum duration') ? 'Maximum Duration: ' : event.duration.toLowerCase().startsWith('time limit') ? 'Time Limit: ' : 'Duration: '}
                                         </span>
-                                        {event.duration.replace(/^Act time\s*/i, '').replace(/^Time Limit\s*/i, '').replace(/^Time limit\s*/i, '').replace(/^duration:?\s*/i, '').replace(/^Editing Time:?\s*/i, '')}
+                                        {event.duration.replace(/^Act time\s*/i, '').replace(/^Time Limit\s*/i, '').replace(/^Time limit\s*/i, '').replace(/^duration:?\s*/i, '').replace(/^Editing Time:?\s*/i, '').replace(/^Maximum Duration:?\s*/i, '')}
                                     </p>
                                 )}
 
@@ -157,30 +171,51 @@ const EventDetails = () => {
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                {displayRules.map((rule, idx) => {
-                                    const isWarning = rule.toLowerCase().startsWith('prohibited:') || rule.toLowerCase().includes('disqualif') || rule.toLowerCase().includes('vulgar');
+                                {(() => {
+                                    let ruleNumber = 1;
+                                    return displayRules.map((rule, idx) => {
+                                        const lowerRule = rule.toLowerCase();
+                                        const isWarning = lowerRule.startsWith('prohibited:') || lowerRule.startsWith('strictly prohibited:') || lowerRule.startsWith('warning:') || lowerRule.includes('disqualif') || lowerRule.includes('vulgar');
+                                        const isAllowed = lowerRule.startsWith('allowed:') || lowerRule.startsWith('judging criteria:');
+                                        const isInternet = lowerRule.startsWith('internet:');
 
-                                    if (isWarning) return null; // Skip warnings to show them separately below
+                                        if (isWarning) {
+                                            return (
+                                                <div key={idx} className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex gap-4 items-start col-span-1 md:col-span-2">
+                                                    <AlertCircle className="text-red-400 shrink-0 mt-0.5" size={20} />
+                                                    <p className="text-red-200/90 text-sm font-medium leading-relaxed">{renderWithHighlights(rule)}</p>
+                                                </div>
+                                            );
+                                        }
 
-                                    return (
-                                        <div key={idx} className="bg-[#15162a] rounded-xl p-5 border border-white/5 hover:border-purple-500/30 transition-colors flex gap-4 group">
-                                            <span className="flex-shrink-0 w-8 h-8 bg-purple-500/10 group-hover:bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center font-bold text-sm transition-colors">
-                                                {idx + 1}
-                                            </span>
-                                            <p className="text-gray-300 text-sm leading-relaxed">{rule}</p>
-                                        </div>
-                                    );
-                                })}
-                            </div>
+                                        if (isAllowed) {
+                                            return (
+                                                <div key={idx} className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4 flex gap-4 items-start col-span-1 md:col-span-2">
+                                                    <CheckCircle2 className="text-emerald-400 shrink-0 mt-0.5" size={20} />
+                                                    <p className="text-emerald-200/90 text-sm font-medium leading-relaxed">{renderWithHighlights(rule)}</p>
+                                                </div>
+                                            );
+                                        }
 
-                            {/* Warning Section */}
-                            <div className="mt-8 space-y-3">
-                                {displayRules.filter(r => r.toLowerCase().startsWith('prohibited:') || r.toLowerCase().includes('disqualif') || r.toLowerCase().includes('vulgar')).map((warning, idx) => (
-                                    <div key={idx} className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 flex gap-4 items-start">
-                                        <AlertCircle className="text-red-400 shrink-0 mt-0.5" size={20} />
-                                        <p className="text-red-200/90 text-sm font-medium">{warning}</p>
-                                    </div>
-                                ))}
+                                        if (isInternet) {
+                                            return (
+                                                <div key={idx} className="bg-teal-500/10 border border-teal-500/20 rounded-xl p-4 flex gap-4 items-start col-span-1 md:col-span-2">
+                                                    <Wifi className="text-teal-400 shrink-0 mt-0.5" size={20} />
+                                                    <p className="text-teal-200/90 text-sm font-medium leading-relaxed">{renderWithHighlights(rule)}</p>
+                                                </div>
+                                            );
+                                        }
+
+                                        return (
+                                            <div key={idx} className="bg-[#15162a] rounded-xl p-5 border border-white/5 hover:border-purple-500/30 transition-colors flex gap-4 group col-span-1 md:col-span-2">
+                                                <span className="flex-shrink-0 w-8 h-8 bg-purple-500/10 group-hover:bg-purple-500/20 text-purple-400 rounded-lg flex items-center justify-center font-bold text-sm transition-colors">
+                                                    {ruleNumber++}
+                                                </span>
+                                                <p className="text-gray-300 text-sm leading-relaxed">{renderWithHighlights(rule)}</p>
+                                            </div>
+                                        );
+                                    });
+                                })()}
                             </div>
                         </div>
 

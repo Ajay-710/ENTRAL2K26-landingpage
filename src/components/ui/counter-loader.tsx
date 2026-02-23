@@ -1,11 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const CounterLoading = ({ onComplete }: { onComplete?: () => void }) => {
-  const [count, setCount] = React.useState(10);
+  const [count, setCount] = useState(10);
+  const [started, setStarted] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    if (!started) return;
+
     // interval for countdown
     const timer = setInterval(() => {
       setCount((prev) => {
@@ -19,7 +23,7 @@ const CounterLoading = ({ onComplete }: { onComplete?: () => void }) => {
     }, 1000); // Standard countdown (1s per text)
 
     return () => clearInterval(timer);
-  }, [onComplete]);
+  }, [onComplete, started]);
 
   // Digit patterns (3x5 grid)
   const digits: Record<number, number[]> = {
@@ -37,19 +41,55 @@ const CounterLoading = ({ onComplete }: { onComplete?: () => void }) => {
   };
 
   // Safe get pattern: clamps to 9 if > 9 (or handle 10 differently if desired)
-  const currentPattern = digits[count > 9 ? 9 : count] || digits[0];
+  const currentPattern = digits[count === 10 ? 10 : count > 9 ? 9 : count] || digits[0];
 
   return (
     <StyledWrapper>
-      <div id="timer">
-        {currentPattern.map((isActive, i) => (
-          <div key={i} className={isActive ? "active" : ""} />
-        ))}
-      </div>
+      {!started ? (
+        <LaunchButton
+          as={motion.button}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          onClick={() => setStarted(true)}
+        >
+          Launch Webpage
+        </LaunchButton>
+      ) : (
+        <div id="timer">
+          {currentPattern.map((isActive, i) => (
+            <div key={i} className={isActive ? "active" : ""} />
+          ))}
+        </div>
+      )}
     </StyledWrapper>
   );
 };
 
+const LaunchButton = styled.button`
+  padding: 1rem 2.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #050510;
+  background: skyblue;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 10;
+
+  &:hover {
+    box-shadow: 0 0 40px rgba(135, 206, 235, 0.8);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+`;
 
 const StyledWrapper = styled.div`
   width: 100vw;

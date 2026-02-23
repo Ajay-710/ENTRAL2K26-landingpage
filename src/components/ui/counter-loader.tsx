@@ -67,27 +67,54 @@ const CounterLoading = ({ onComplete }: { onComplete?: () => void }) => {
 };
 
 const LaunchButton = styled.button`
-  padding: 1rem 2.5rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #050510;
-  background: skyblue;
-  border: none;
-  border-radius: 50px;
+  padding: 1.2rem 3.5rem;
+  font-size: 1.15rem;
+  font-weight: 400;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
   cursor: pointer;
-  box-shadow: 0 0 20px rgba(135, 206, 235, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  letter-spacing: 6px;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
   z-index: 10;
 
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(135, 206, 235, 0.2),
+      transparent
+    );
+    transition: all 0.6s ease;
+  }
+
   &:hover {
-    box-shadow: 0 0 40px rgba(135, 206, 235, 0.8);
-    transform: scale(1.05);
+    border-color: rgba(135, 206, 235, 0.5);
+    box-shadow: 0 0 30px rgba(135, 206, 235, 0.3), inset 0 0 15px rgba(135, 206, 235, 0.1);
+    transform: translateY(-4px);
+    color: skyblue;
+    
+    &::before {
+      left: 100%;
+    }
   }
 
   &:active {
-    transform: scale(0.95);
+    transform: translateY(2px) scale(0.98);
   }
 `;
 

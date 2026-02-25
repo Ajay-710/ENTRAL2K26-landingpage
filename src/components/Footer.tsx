@@ -66,14 +66,42 @@ const Footer = () => {
                             </li>
                             <li className="flex items-start gap-3 text-gray-400">
                                 <Phone className="w-5 h-5 text-cyan-400 mt-1 shrink-0" />
-                                <div className="space-y-3">
+                                <div className="space-y-5 w-full">
+                                    {/* Staff Coordinators */}
                                     <div>
-                                        <p className="text-white font-bold text-sm tracking-wide">Stanly Rumald F</p>
-                                        <p className="text-xs font-medium">+91 9944537321</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-500 mb-3 border-b border-white/10 pb-1">Staff Coordinators</p>
+                                        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-y-3 gap-x-2">
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Ms. Jemiline</p>
+                                                <a href="tel:+919094094405" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 90940 94405</a>
+                                            </div>
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Ms. Dernita</p>
+                                                <a href="tel:+917299511230" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 72995 11230</a>
+                                            </div>
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Ms. Vaishnavi</p>
+                                                <a href="tel:+917502150700" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 75021 50700</a>
+                                            </div>
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Mr. Vignesh</p>
+                                                <a href="tel:+916374625857" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 63746 25857</a>
+                                            </div>
+                                        </div>
                                     </div>
+                                    {/* Student Coordinators */}
                                     <div>
-                                        <p className="text-white font-bold text-sm tracking-wide">Ashvitha V</p>
-                                        <p className="text-xs font-medium">+91 73059 71495</p>
+                                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-cyan-500 mb-3 border-b border-white/10 pb-1">Student Coordinators</p>
+                                        <div className="grid grid-cols-1 2xl:grid-cols-2 gap-y-3 gap-x-2">
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Stanly Rumald F</p>
+                                                <a href="tel:+919944537321" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 9944537321</a>
+                                            </div>
+                                            <div>
+                                                <p className="text-white font-bold text-sm tracking-wide whitespace-nowrap">Ashvitha V</p>
+                                                <a href="tel:+917305971495" className="text-xs font-medium hover:text-cyan-400 transition-colors block mt-0.5">+91 73059 71495</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </li>

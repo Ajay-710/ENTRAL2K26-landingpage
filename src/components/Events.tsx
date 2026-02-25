@@ -36,6 +36,18 @@ const Events = () => {
                         Event <span className="text-cyan-400">Lineup</span>
                     </h2>
 
+                    {/* Championship Banner */}
+                    <div className="flex justify-center mb-10">
+                        <div className="inline-flex px-6 py-3 rounded-2xl bg-gradient-to-r from-yellow-500/10 via-yellow-400/20 to-yellow-500/10 border border-yellow-500/30 backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.15)] relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <p className="text-yellow-400 text-sm md:text-base font-bold tracking-widest uppercase flex flex-col md:flex-row items-center justify-center gap-2 text-center relative z-10">
+                                <span className="text-2xl">🏆</span>
+                                <span>Overall Championship Trophy Awarded Based On Both Days' Performance</span>
+                                <span className="text-2xl hidden md:inline">🏆</span>
+                            </p>
+                        </div>
+                    </div>
+
                     {/* Day Toggle */}
                     <div className="flex justify-center gap-6 mb-12">
                         {(['Day 1', 'Day 2', 'Online'] as const).map((day) => (

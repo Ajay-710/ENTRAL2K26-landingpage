@@ -78,6 +78,21 @@ const EventDetails = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                     {/* Left Column (Participant Info & Format) */}
                     <div className="lg:col-span-4 space-y-6">
+
+                        {/* Trophy Announcement Card */}
+                        <div className="bg-gradient-to-br from-yellow-500/10 to-amber-600/10 backdrop-blur-md border border-yellow-500/30 rounded-3xl p-6 shadow-[0_0_30px_rgba(234,179,8,0.1)] relative overflow-hidden group">
+                            <div className="absolute inset-0 bg-yellow-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="flex items-center gap-3 mb-4 relative z-10">
+                                <div className="p-2 bg-yellow-500/20 rounded-xl text-yellow-400">
+                                    <Trophy size={24} />
+                                </div>
+                                <h3 className="text-xl font-bold text-yellow-400 uppercase tracking-wider">Championship</h3>
+                            </div>
+                            <p className="text-yellow-100/90 text-sm font-medium leading-relaxed relative z-10">
+                                An <span className="text-yellow-400 font-bold">Overall Championship Trophy</span> will be awarded based on combined performance across <span className="text-yellow-400 font-bold">both days</span>!
+                            </p>
+                        </div>
+
                         {/* Participants Card */}
                         <div className="bg-[#0f1020]/80 backdrop-blur-md border border-white/5 rounded-3xl p-6 shadow-xl">
                             <div className="flex items-center gap-3 mb-6">

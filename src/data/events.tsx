@@ -658,15 +658,11 @@ export const events: Event[] = [
         color: 'from-blue-500 to-cyan-500',
         image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070',
         rules: [
-            'Number of participants: Individual participants',
-            'Teams per College: 2 teams per college',
-            'The event will be conducted in multiple rounds (Prelims/Finals, if required).',
-            'Robots must be manually controlled (wired/wireless).',
-            'The robot must fit within the specified dimensions (as announced by organizers).',
-            'Only one operator is allowed to control the robot during the race.',
-            'Warning: Touching the robot during the run will result in penalty or disqualification.',
-            'Strictly Prohibited: Damaging the track or other robots will lead to immediate disqualification.',
-            'Teams must bring their own robot and required accessories (battery, controller, tools, etc.).'
+            'Track Event with Minimum lap completion Time',
+            'Wireless 4 wheeled Robot - Required',
+            'Maximum Dimensions: 30cm x 20cm',
+            'No online purchased robot should be used, self assembled robot will be considered for evaluation.',
+            'Judges Decision will be final.'
         ]
     },
     {

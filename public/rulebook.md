@@ -279,7 +279,7 @@
 - Singing is a performance event where participants present solo or group (max 5) songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.
 
 ### Rules
-- Number of participants: Solo or Group (max 5)
+- Number of participants: Solo and Group (max 5)
 - Per College: Maximum 2 teams
 - Participants must bring their own instruments or karaoke track if required.
 - Content Restriction: Songs must not contain vulgar lyrics or content that may offend any religion or community.

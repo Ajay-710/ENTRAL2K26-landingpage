@@ -371,7 +371,7 @@ export const events: Event[] = [
         color: 'from-blue-400 to-purple-500',
         image: 'https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=2070',
         rules: [
-            'Number of participants: Solo or Group (max 5)',
+            'Number of participants: Solo and Group (max 5)',
             'Per College: Maximum 2 teams',
             'Participants must bring their own instruments or karaoke track if required.',
             'Content Restriction: Songs must not contain vulgar lyrics or content that may offend any religion or community.',

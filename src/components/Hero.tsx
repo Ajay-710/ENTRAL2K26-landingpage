@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Zap } from 'lucide-react';
+import { Zap, Download } from 'lucide-react';
 import { Vortex } from './ui/vortex';
 import { ParticleTextEffect } from './ui/particle-text-effect';
 
@@ -69,14 +69,18 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="group relative px-10 py-5 bg-cyan-500 text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)]">
+                    <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="group relative px-8 py-4 bg-cyan-500 text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)]">
                         <span className="relative z-10 flex items-center gap-2">
                             Register Now <Zap className="w-5 h-5 fill-black" />
                         </span>
                     </button>
 
-                    <a href="#events" className="px-10 py-5 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md">
+                    <a href="#events" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md">
                         Explore Events
+                    </a>
+
+                    <a href="/RuleBook.pdf" download="ENTHRAL_2K26_RuleBook.pdf" className="px-8 py-4 bg-white/5 border border-white/10 text-cyan-400 font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md flex items-center gap-2">
+                        Rule Book <Download className="w-5 h-5" />
                     </a>
                 </motion.div>
             </div>

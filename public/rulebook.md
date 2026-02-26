@@ -276,7 +276,7 @@
 **Day:** Day 1
 
 ### Description
-- Singing is a performance event where participants present solo or group songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.
+- Singing is a performance event where participants present solo or group (max 5) songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.
 
 ### Rules
 - Number of participants: Solo or Group (max 5)
@@ -419,7 +419,7 @@
 - Teams can perform any dance style (Classical, Folk, Western, Fusion, etc.) while maintaining coordination, creativity, and stage presence.
 
 ### Rules
-- Number of participants: Maximum 8 per team
+- Number of participants: Solo and group (max 8)
 - Teams per College: 2 teams
 - Performances must be college-appropriate.
 - Dress Code: Participants must wear decent, modest, and appropriate costumes. Revealing costumes are strictly prohibited.
@@ -740,7 +740,7 @@
 **Day:** Online
 
 ### Description
-- The event will be conducted online on the specified platform. Participants must join on time and ensure a stable internet connection.
+- The event will happen on Day 2 and be conducted online on the specified platform. Participants must join on time and ensure a stable internet connection.
 
 ### Rules
 - Number of participants: Min 1, Max 3 per team
@@ -760,6 +760,7 @@
 - Unleash your creativity and capture the vibe of ENTHRAL
 - Create engaging and entertaining reels that showcase the spirit, fun, and energy of the event.
 - Participants get time to record and edit their reels.
+- This event will happen on Day 2.
 
 ### Rules
 - Number of participants: Min 1, Max 2 per team

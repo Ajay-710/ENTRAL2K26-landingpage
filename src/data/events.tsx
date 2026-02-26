@@ -364,7 +364,7 @@ export const events: Event[] = [
         category: 'Cultural',
         day: 'Day 1',
         description: [
-            'Singing is a performance event where participants present solo or group songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.'
+            'Singing is a performance event where participants present solo or group (max 5) songs within the allotted time. Participants may use instruments or karaoke tracks to enhance their performance.'
         ],
         details: 'Venue: Auditorium',
         icon: <Mic2 size={24} />,
@@ -540,7 +540,7 @@ export const events: Event[] = [
         color: 'from-indigo-500 to-purple-600',
         image: 'https://images.unsplash.com/photo-1535525153412-5a42439a210d?q=80&w=2070',
         rules: [
-            'Number of participants: Maximum 8 per team',
+            'Number of participants: Solo and group (max 8)',
             'Teams per College: 2 teams',
             'Performances must be college-appropriate.',
             'Dress Code: Participants must wear decent, modest, and appropriate costumes. Revealing costumes are strictly prohibited.',
@@ -919,7 +919,7 @@ export const events: Event[] = [
         category: 'Gaming',
         day: 'Online',
         description: [
-            'The event will be conducted online on the specified platform. Participants must join on time and ensure a stable internet connection.'
+            'The event will happen on Day 2 and be conducted online on the specified platform. Participants must join on time and ensure a stable internet connection.'
         ],
         details: 'Online',
         icon: <Swords size={24} />,
@@ -942,7 +942,8 @@ export const events: Event[] = [
         description: [
             'Unleash your creativity and capture the vibe of ENTHRAL',
             'Create engaging and entertaining reels that showcase the spirit, fun, and energy of the event.',
-            'Participants get time to record and edit their reels.'
+            'Participants get time to record and edit their reels.',
+            'This event will happen on Day 2.'
         ],
         details: 'Online Submission',
         icon: <Video size={24} />,

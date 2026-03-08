@@ -113,9 +113,16 @@ const Events = () => {
                                         <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${event.color} flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                                             {event.icon}
                                         </div>
-                                        <span className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[10px] font-bold tracking-wider text-cyan-300 uppercase backdrop-blur-md">
-                                            {event.category}
-                                        </span>
+                                        <div className="flex flex-col items-end gap-2">
+                                            {event.isClosed && (
+                                                <span className="px-3 py-1 rounded-full bg-red-500/20 border border-red-500/50 text-[10px] font-bold tracking-wider text-red-400 uppercase backdrop-blur-md">
+                                                    SLOTS FILLED
+                                                </span>
+                                            )}
+                                            <span className="px-3 py-1 rounded-full bg-white/10 border border-white/10 text-[10px] font-bold tracking-wider text-cyan-300 uppercase backdrop-blur-md">
+                                                {event.category}
+                                            </span>
+                                        </div>
                                     </div>
 
                                     <div>

@@ -24,6 +24,7 @@ export interface Event {
     contact?: string;
     note?: string;
     theme?: string;
+    isClosed?: boolean;
 }
 
 export const events: Event[] = [
@@ -102,6 +103,7 @@ export const events: Event[] = [
         title: 'Hackathon',
         category: 'Technical',
         day: 'Day 1',
+        isClosed: true,
         description: [
             'Hackathon is a team-based innovation event where participants build solutions for problem statements provided at the start of the competition.'
         ],
@@ -582,6 +584,7 @@ export const events: Event[] = [
         title: 'Free Fire',
         category: 'Gaming',
         day: 'Day 2',
+        isClosed: true,
         description: [
             'Specific team rules will be announced before the match.',
             'Game Modes: Matches will be played in Battle Royale (BR) mode and Clash Squad mode.',

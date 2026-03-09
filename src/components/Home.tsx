@@ -8,7 +8,7 @@ import Highlights from './Highlights';
 import Registration from './Registration';
 import Footer from './Footer';
 import { NavBarDemo } from './NavBarDemo';
-import CountdownTimer from './CountdownTimer';
+
 
 const Home = () => {
     return (
@@ -29,7 +29,7 @@ const Home = () => {
                 <Registration />
             </main>
             <Footer />
-            <CountdownTimer />
+
         </div>
     );
 };

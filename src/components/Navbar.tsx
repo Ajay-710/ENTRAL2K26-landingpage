@@ -47,8 +47,8 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)] hover:shadow-[0_0_25px_rgba(6,182,212,0.8)] transition-all duration-300 transform hover:scale-105">
-                                Register Now
+                            <button disabled className="bg-red-600/80 cursor-not-allowed text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300">
+                                Registrations Closed
                             </button>
                         </div>
                     </div>
@@ -83,8 +83,8 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)]">
-                                Register Now
+                            <button disabled className="w-full mt-4 bg-red-600/80 cursor-not-allowed text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                                Registrations Closed
                             </button>
                         </div>
                     </motion.div>

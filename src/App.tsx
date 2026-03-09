@@ -11,6 +11,12 @@ function App() {
     return (
         <div className="bg-[#050510] min-h-screen text-white selection:bg-cyan-500/30">
             <CustomCursor />
+            {/* Global Registration Closed Banner */}
+            <div className="fixed top-0 left-0 w-full bg-red-600 z-[100] text-center py-2 px-4 shadow-[0_0_15px_rgba(220,38,38,0.6)] flex items-center justify-center pointer-events-none">
+                <p className="text-white font-black uppercase tracking-widest text-sm md:text-lg drop-shadow-md">
+                    🚨 REGISTRATIONS ARE CLOSED! 🚨
+                </p>
+            </div>
             <AnimatePresence mode="wait">
                 <motion.div
                     key="content"

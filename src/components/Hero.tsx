@@ -69,9 +69,9 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    <button onClick={() => window.open('https://forms.gle/tyJKwbgkx3mgu8VU6', '_blank')} className="group relative px-8 py-4 bg-cyan-500 text-black font-bold text-lg rounded-full overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_40px_rgba(6,182,212,0.6)]">
+                    <button disabled className="group relative px-8 py-4 bg-red-600/80 cursor-not-allowed text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
                         <span className="relative z-10 flex items-center gap-2">
-                            Register Now <Zap className="w-5 h-5 fill-black" />
+                            Registrations Closed
                         </span>
                     </button>
 

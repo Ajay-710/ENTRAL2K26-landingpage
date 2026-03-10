@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const CountdownTimer = () => {
-    // Set target date to 10 hours from the request time: 2026-03-09T21:00:00+05:30
-    const [targetDate] = useState(new Date('2026-03-09T21:00:00+05:30').getTime());
+    // Set target date to 10 minutes from now
+    const [targetDate] = useState(new Date('2026-03-10T18:44:51+05:30').getTime());
     const [timeLeft, setTimeLeft] = useState({
         hours: 0,
         minutes: 0,

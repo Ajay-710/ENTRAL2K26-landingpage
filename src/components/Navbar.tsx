@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRegistrationStatus } from '../hooks/useRegistrationStatus';
 
 const Navbar = () => {
+    const isRegistrationOpen = useRegistrationStatus();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -47,9 +49,15 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button disabled className="bg-red-600/80 cursor-not-allowed text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300">
-                                Registrations Closed
-                            </button>
+                            {!isRegistrationOpen ? (
+                                <button disabled className="bg-red-600/80 cursor-not-allowed text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300">
+                                    Registrations Closed
+                                </button>
+                            ) : (
+                                <button onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')} className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 transition-all duration-300 transform hover:scale-105 text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)]">
+                                    Register Now
+                                </button>
+                            )}
                         </div>
                     </div>
 
@@ -83,9 +91,15 @@ const Navbar = () => {
                                     {link.name}
                                 </a>
                             ))}
-                            <button disabled className="w-full mt-4 bg-red-600/80 cursor-not-allowed text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-                                Registrations Closed
-                            </button>
+                            {!isRegistrationOpen ? (
+                                <button disabled className="w-full mt-4 bg-red-600/80 cursor-not-allowed text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                                    Registrations Closed
+                                </button>
+                            ) : (
+                                <button onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')} className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300">
+                                    Register Now
+                                </button>
+                            )}
                         </div>
                     </motion.div>
                 )}

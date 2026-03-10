@@ -3,8 +3,10 @@ import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Clock, Users, Trophy, AlertCircle, Info, Music, Bot, Code2, Cpu, FileText, Gamepad2, Gavel, HelpCircle, Image, Layers, Lightbulb, MessageSquare, Mic2, Palette, PenTool, Radio, Shirt, Skull, Smile, Smartphone, Swords, Terminal, Video, Zap, Activity, BrainCircuit, Bug, MonitorPlay, MousePointer2, CheckCircle2, Wifi } from 'lucide-react';
 import { events } from '../data/events';
+import { useRegistrationStatus } from '../hooks/useRegistrationStatus';
 
 const EventDetails = () => {
+    const isRegistrationOpen = useRegistrationStatus();
     const { id } = useParams<{ id: string }>();
     const event = events.find(e => e.id === id);
 
@@ -236,12 +238,22 @@ const EventDetails = () => {
 
                         {/* Register Button */}
                         <div className="mt-8 flex justify-end">
-                            <button
-                                disabled
-                                className="w-full md:w-auto px-12 py-5 bg-red-600/80 cursor-not-allowed text-white font-black text-lg rounded-2xl opacity-90 uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
-                            >
-                                REGISTRATIONS CLOSED
-                            </button>
+                            {!isRegistrationOpen || event.isClosed ? (
+                                <button
+                                    disabled
+                                    className="w-full md:w-auto px-12 py-5 bg-red-600/80 cursor-not-allowed text-white font-black text-lg rounded-2xl opacity-90 uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                                >
+                                    REGISTRATIONS CLOSED
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')}
+                                    className="w-full md:w-auto px-12 py-5 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-lg rounded-2xl shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-all transform hover:-translate-y-1 active:scale-95 uppercase tracking-wider flex items-center justify-center gap-2"
+                                >
+                                    REGISTER NOW
+                                    <ArrowLeft className="rotate-180" size={20} />
+                                </button>
+                            )}
                         </div>
                     </div>
                 </div>

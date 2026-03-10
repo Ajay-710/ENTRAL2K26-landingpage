@@ -3,8 +3,10 @@ import { motion } from 'framer-motion';
 import { Zap, Download } from 'lucide-react';
 import { Vortex } from './ui/vortex';
 import { ParticleTextEffect } from './ui/particle-text-effect';
+import { useRegistrationStatus } from '../hooks/useRegistrationStatus';
 
 const Hero = () => {
+    const isRegistrationOpen = useRegistrationStatus();
     return (
         <section id="home" className="relative h-screen w-full bg-black overflow-hidden flex items-center justify-center">
             {/* Vortex Animation Background */}
@@ -69,11 +71,19 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 0.8 }}
                 >
-                    <button disabled className="group relative px-8 py-4 bg-red-600/80 cursor-not-allowed text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
-                        <span className="relative z-10 flex items-center gap-2">
-                            Registrations Closed
-                        </span>
-                    </button>
+                    {!isRegistrationOpen ? (
+                        <button disabled className="group relative px-8 py-4 bg-red-600/80 cursor-not-allowed text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
+                            <span className="relative z-10 flex items-center gap-2">
+                                Registrations Closed
+                            </span>
+                        </button>
+                    ) : (
+                        <a href="https://forms.gle/LLcWNeS6kTgquCLZ9" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300 hover:scale-105 active:scale-95">
+                            <span className="relative z-10 flex items-center gap-2">
+                                Register Now <Zap className="w-5 h-5 group-hover:animate-pulse" />
+                            </span>
+                        </a>
+                    )}
 
                     <a href="#events" className="px-8 py-4 bg-white/5 border border-white/10 text-white font-bold text-lg rounded-full hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md">
                         Explore Events

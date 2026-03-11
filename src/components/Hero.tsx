@@ -72,11 +72,14 @@ const Hero = () => {
                     transition={{ delay: 1, duration: 0.8 }}
                 >
                     {!isRegistrationOpen ? (
-                        <button disabled className="group relative px-8 py-4 bg-red-600/80 cursor-not-allowed text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
-                            <span className="relative z-10 flex items-center gap-2">
-                                Registrations Closed
-                            </span>
-                        </button>
+                        <div className="flex flex-col items-center gap-2">
+                            <button disabled className="group relative px-8 py-4 bg-red-600/80 cursor-not-allowed text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
+                                <span className="relative z-10 flex items-center gap-2">
+                                    Online Closed
+                                </span>
+                            </button>
+                            <span className="text-yellow-400 font-bold text-sm animate-pulse whitespace-nowrap">✨ On-Spot Available ✨</span>
+                        </div>
                     ) : (
                         <a href="https://forms.gle/LLcWNeS6kTgquCLZ9" target="_blank" rel="noopener noreferrer" className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold text-lg rounded-full overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300 hover:scale-105 active:scale-95">
                             <span className="relative z-10 flex items-center gap-2">

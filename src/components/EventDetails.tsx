@@ -236,15 +236,19 @@ const EventDetails = () => {
                             </div>
                         </div>
 
-                        {/* Register Button */}
-                        <div className="mt-8 flex justify-end">
+                        <div className="mt-8 flex flex-col md:flex-row justify-end items-center gap-4">
                             {!isRegistrationOpen || event.isClosed ? (
-                                <button
-                                    disabled
-                                    className="w-full md:w-auto px-12 py-5 bg-red-600/80 cursor-not-allowed text-white font-black text-lg rounded-2xl opacity-90 uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
-                                >
-                                    REGISTRATIONS CLOSED
-                                </button>
+                                <div className="flex flex-col items-center md:items-end w-full md:w-auto">
+                                    <button
+                                        disabled
+                                        className="w-full md:w-auto px-12 py-5 bg-red-600/80 cursor-not-allowed text-white font-black text-lg rounded-2xl opacity-90 uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(220,38,38,0.4)]"
+                                    >
+                                        ONLINE REGISTRATIONS CLOSED
+                                    </button>
+                                    <p className="text-yellow-400 font-bold text-sm md:text-base mt-3 text-center w-full md:w-auto animate-pulse">
+                                        ✨ On-Spot Registrations Available ✨
+                                    </p>
+                                </div>
                             ) : (
                                 <button
                                     onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')}

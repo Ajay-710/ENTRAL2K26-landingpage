@@ -50,9 +50,12 @@ const Navbar = () => {
                                 </a>
                             ))}
                             {!isRegistrationOpen ? (
-                                <button disabled className="bg-red-600/80 cursor-not-allowed text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300">
-                                    Registrations Closed
-                                </button>
+                                <div className="flex flex-col items-center justify-center mt-[-4px]">
+                                    <button disabled className="bg-red-600/80 cursor-not-allowed text-white px-6 py-1.5 rounded-full text-sm font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)] transition-all duration-300">
+                                        Online Closed
+                                    </button>
+                                    <span className="text-yellow-400 text-[11px] font-bold mt-1">On-Spot Available</span>
+                                </div>
                             ) : (
                                 <button onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')} className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:opacity-90 transition-all duration-300 transform hover:scale-105 text-white px-6 py-2 rounded-full font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)]">
                                     Register Now
@@ -92,9 +95,12 @@ const Navbar = () => {
                                 </a>
                             ))}
                             {!isRegistrationOpen ? (
-                                <button disabled className="w-full mt-4 bg-red-600/80 cursor-not-allowed text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-                                    Registrations Closed
-                                </button>
+                                <div className="mt-4 flex flex-col items-center w-full">
+                                    <button disabled className="w-full bg-red-600/80 cursor-not-allowed text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                                        Online Registrations Closed
+                                    </button>
+                                    <span className="text-yellow-400 text-sm font-bold mt-2">✨ On-Spot Registrations Available ✨</span>
+                                </div>
                             ) : (
                                 <button onClick={() => window.open('https://forms.gle/LLcWNeS6kTgquCLZ9', '_blank')} className="w-full mt-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-md font-medium shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300">
                                     Register Now

@@ -15,9 +15,12 @@ function App() {
             <CustomCursor />
             {/* Global Registration Closed Banner */}
             {!isRegistrationOpen && (
-                <div className="fixed top-0 left-0 w-full bg-red-600 z-[100] text-center py-2 px-4 shadow-[0_0_15px_rgba(220,38,38,0.6)] flex items-center justify-center pointer-events-none">
+                <div className="fixed top-0 left-0 w-full bg-red-600 z-[100] text-center py-2 px-4 shadow-[0_0_15px_rgba(220,38,38,0.6)] flex flex-col items-center justify-center pointer-events-none">
                     <p className="text-white font-black uppercase tracking-widest text-sm md:text-lg drop-shadow-md">
-                        🚨 REGISTRATIONS ARE CLOSED! 🚨
+                        🚨 ONLINE REGISTRATIONS ARE CLOSED! 🚨
+                    </p>
+                    <p className="text-yellow-300 font-bold uppercase tracking-widest text-xs md:text-sm drop-shadow-md mt-1">
+                        ✨ ON-SPOT REGISTRATIONS ARE AVAILABLE ✨
                     </p>
                 </div>
             )}

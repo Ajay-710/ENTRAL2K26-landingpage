@@ -64,9 +64,14 @@ const Registration = () => {
                         </div>
 
                         {!isRegistrationOpen ? (
-                            <button disabled className="bg-red-600/80 cursor-not-allowed text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
-                                Registrations Closed
-                            </button>
+                            <div className="flex flex-col items-center gap-4">
+                                <button disabled className="bg-red-600/80 cursor-not-allowed text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(220,38,38,0.4)] transition-all duration-300">
+                                    Online Registrations Closed
+                                </button>
+                                <p className="text-yellow-400 font-bold text-lg md:text-xl animate-pulse">
+                                    ✨ On-Spot Registrations Available! ✨
+                                </p>
+                            </div>
                         ) : (
                             <a href="https://forms.gle/LLcWNeS6kTgquCLZ9" target="_blank" rel="noopener noreferrer" className="inline-block bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-lg font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.6)] transition-all duration-300 hover:scale-105 active:scale-95">
                                 Register Now
